@@ -1,318 +1,328 @@
-/* INDEX.CSS -- The style definitions for the Speedgolf App. These are imported
+/* INDEX.CSS -- The style definitions for my website. These are imported
   in index.css for the entire app. */
 
-  /* Force an element to span entire height of window */
-  .span-height {
-    height: 100%;
-  }
-  
-  /* Make an item visible */
-  .visible {
-    display: block;
-  }
-  
-  /* Make an item invisible */
-  .invisible {
-    display: none;
-  }
-  
-  /* Styling of the fixed top bar in the app */
-  .navbar {
-    overflow: hidden; /* Don't allow scrolling */
-    display: block; /* Occupies its own horizontal space */
-    background-color: #16400a;
-    position: fixed; /* Doesn't move */
-    top: 0;
-    width: 100%; /* 100% of width of screen */
-    align-content: center;
-    border-radius: 0px;
-    padding: 0px;
-    z-index: 100; /* Force it to be on top */
-  }
-  
-  .navbar-title {
+/* Force an element to span entire height of window */
+.span-height {
+  height: 100%;
+}
+
+/* Make an item visible */
+.visible {
+  display: block;
+}
+
+/* Make an item invisible */
+.invisible {
+  display: none;
+}
+
+/* Styling of the fixed top bar in the app */
+.navbar {
+  overflow: hidden;
+  /* Don't allow scrolling */
+  display: block;
+  /* Occupies its own horizontal space */
+  background-color: #16400a;
+  position: fixed;
+  /* Doesn't move */
+  top: 0;
+  width: 100%;
+  /* 100% of width of screen */
+  align-content: center;
+  border-radius: 0px;
+  padding: 0px;
+  z-index: 100;
+  /* Force it to be on top */
+}
+
+.navbar-title {
   color: white;
   font-size: 18px;
-  }
-  
-  /* navbarItems defines styling of items within navbar. They should be centered top-to-bottom
+}
+
+/* navbarItems defines styling of items within navbar. They should be centered top-to-bottom
    with a small internal margin */
-  .navbar-items {
-    display: inline-flex; 
-    align-items: center; 
-    padding-top: 5px; 
-    padding-bottom: 5px;
-  }
-  
-  /* sidemenu -- Styling of the side navigation menu */
-  .sidemenu {
-    height: 100%; /* Menu is full height of window */
-    position: fixed; /* Menu stays in place regardless of other content */
-    z-index: 150; /* Force the menu to be at front */
-    top: 48px; /* Position menu 48 px from top of screen; accomodates top navbar */
-    left: 0; /* Position the menu on the left hand side */
-    background-color: #16400a; /* Background color is dark blue */
-    overflow-x: hidden; /* Don't allow horizontal scroll */
-    transition: 0.5s; /* Animation transition time is 0.5 sec */
-    padding-top: 2px; /* Place menu content 2 px from top */
-  }
-  
-  /* applies only to an anchor tag that's a child of a sidenav element. */
-  .sidemenu a {
-        padding: 16px 8px 16px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        color: white;
-        display: block;
-        transition: 0.3s;
-    }
-    
-  
-  /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
-  
-  .sidemenu a:visited {
-    background-color:  #16400a !important;
-    color: white !important;
-  }
+.navbar-items {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
-  .sidemenu a:hover {
-    cursor: default;
-    text-decoration: none;
-    color: black !important;
-    background-color: #F0F0F0;
-  }
+/* sidemenu -- Styling of the side navigation menu */
+.sidemenu {
+  height: 100%;
+  /* Menu is full height of window */
+  position: fixed;
+  /* Menu stays in place regardless of other content */
+  z-index: 150;
+  /* Force the menu to be at front */
+  top: 48px;
+  /* Position menu 48 px from top of screen; accomodates top navbar */
+  left: 0;
+  /* Position the menu on the left hand side */
+  background-color: #16400a;
+  /* Background color is dark blue */
+  overflow-x: hidden;
+  /* Don't allow horizontal scroll */
+  transition: 0.5s;
+  /* Animation transition time is 0.5 sec */
+  padding-top: 2px;
+  /* Place menu content 2 px from top */
+}
 
-  .sidemenu a:active {
-    background-color:  #16400a !important;
-    color: white !important;
-  }
-  
-  .sidemenu {
-    color: white;
-  }
+/* applies only to an anchor tag that's a child of a sidenav element. */
+.sidemenu a {
+  padding: 16px 8px 16px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
 
-  /* set width to 250px when menu is open */
-  .sidemenu-open {
-    width: 250px;
-  }
-  
-  /* set width to 0px when menu is closed */
-  .sidemenu-closed {
-    width: 0px;
-  }
-  
-  
-  /* Cascading style within a style: This definition applies only to sidemenu-title class defined in an 
-   element that's a child of sidemenu element. */   
-  .sidemenu .sidemenu-title {
-    margin-bottom: 2px;
-    border-bottom: 2px solid white;
-   }
-  
-   .sidemenu .sidemenu-userID {
-     font-size: 14px;
-     color: white;
-   }
-  
-  /* side menu item styling */
-  .sidemenu-btn {
-    background-color: transparent;
-    border-color: #16400a;
-    text-align: center;
-    color: white;
-  }
-  
-  .sidemenu-btn-icon {
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  /* side menu styling when menu item selected */
-  .sidemenu-item-selected {
-         pointer-events: none;
-         cursor: default;
-         text-decoration: none;
-         color: #16400a !important;
-         background-color: #F0F0F0;
-  }
-  
-  /* The SpeedScore dark blue color theme  */       
-  .btn-color-theme {
-        background-color: #16400a;
-        color: white;
-    }
-    
-  /* The color theme when a bottom bar menu item is selected */
-  .btn-alt-color-theme {
-        background-color: #F0F0F0;
-        color: #16400a;
-    }
-  
-  /* change items to gray when disabled class is applied  */
-  .disabled {
+
+/* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
+
+.sidemenu a:visited {
+  background-color: #16400a !important;
+  color: white !important;
+}
+
+.sidemenu a:hover {
+  cursor: default;
+  text-decoration: none;
+  color: black !important;
+  background-color: #F0F0F0;
+}
+
+.sidemenu a:active {
+  background-color: #16400a !important;
+  color: white !important;
+}
+
+.sidemenu {
+  color: white;
+}
+
+/* set width to 250px when menu is open */
+.sidemenu-open {
+  width: 250px;
+}
+
+/* set width to 0px when menu is closed */
+.sidemenu-closed {
+  width: 0px;
+}
+
+
+/* Cascading style within a style: This definition applies only to sidemenu-title class defined in an 
+   element that's a child of sidemenu element. */
+.sidemenu .sidemenu-title {
+  margin-bottom: 2px;
+  border-bottom: 2px solid white;
+}
+
+.sidemenu .sidemenu-userID {
+  font-size: 14px;
+  color: white;
+}
+
+/* side menu item styling */
+.sidemenu-btn {
+  background-color: transparent;
+  border-color: #16400a;
+  text-align: center;
+  color: white;
+}
+
+.sidemenu-btn-icon {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* side menu styling when menu item selected */
+.sidemenu-item-selected {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #16400a !important;
+  background-color: #F0F0F0;
+}
+
+/* The SpeedScore dark blue color theme  */
+.btn-color-theme {
+  background-color: #16400a;
+  color: white;
+}
+
+/* The color theme when a bottom bar menu item is selected */
+.btn-alt-color-theme {
+  background-color: #F0F0F0;
+  color: #16400a;
+}
+
+/* change items to gray when disabled class is applied  */
+.disabled {
   color: gray;
-  }
-    
-  .btn-color-theme-outline {
-        border: 2px;
-        border-color: #16400a;
-        color: #16400a;
-  }
-  
-  /* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
-  .padded-page {
-    padding: 56px 0px 56px 0px;
-    height: 100%; /* 100% of app */
-  }
-  
-  .hide {
-  display:none;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  /* Styling for mode bar at the bottom of the page */
-  .modebar {
-    background-color: #16400a;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  /* Style the links inside the bottom nav bar */
-  .modebar a {
-    display: block;
-    float: left;
-    width: 33%;
-    color: white;
-    text-align: center;
-    padding: 2px 2px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+}
 
-  /* Add a gray background color to button when it is hovered */
-  .modebar a:hover {
-      color: white;
-    }
-  
-  /* Add a gray background color to the button when it is selected */
-  .modebar a:active {
-    background-color: #F0F0F0;
-    color: white;
-  }
-  
-  /* mode bar button styling when item is selected */
-  .modebar-item-selected {
-    pointer-events: none;
-    cursor: default;
-    text-decoration: none;
-    color: black !important;
-    background-color: #F0F0F0;
-  }
-  
-  /* Hide the link that should open and close the navbar on small screens */
-  .modebar .icon {
-    display: none;
-  } 
-  
-  /* Style the icons in the bottom bar */
-  .modebar-icon {
-    display:block; 
-    padding-top:3px;
-    color: white;
-  }
+.btn-color-theme-outline {
+  border: 2px;
+  border-color: #16400a;
+  color: #16400a;
+}
 
-  .modebar-icon-selected {
-    display:block; 
-    padding-top:3px;
-    color: black;
-  }
-  
-  /* Style the text in the bottom bar */
-  .modebar-text {
-    display:block;
-    font-size: small;
-    color: white;
-  }
+/* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
+.padded-page {
+  padding: 56px 0px 56px 0px;
+  height: 100%;
+  /* 100% of app */
+}
 
-  .modebar-text-selected {
-    display:block;
-    font-size: small;
-    color: black;
-  }
-  
-  /* Style the floating action button, which is fixed in the lower right of the app */
-  .floatbtn {
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:60px;
-    right:40px;
-    background-color:#16400a;
-    color:white;
-    border-radius:50px;
-    text-align:center;
-    box-shadow: 2px 2px 3px #999;
-  }
-  
-  .floatbtn-icon{
-    margin-top:22px;
-    color: white;
-  }
-  
-  .floatbtn a:visited {
-    color: white;
-  }
-  
-  .floatbtn a:active {
-    color: white;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  /* This class disables a button */
-  .disabled-button {
-    pointer-events: none;
-    opacity: 0.4;
-  }
-  
-  .floatbtn a:visited {
-    color: white !important;
-  }
-  
-  .floatbtn a:active {
-    color: white !important;
-  }
-  
-  /* Login page styling */
-  .login-text {
-    text-align: center;
-    width: 90%;
-    height: 10%;
-    font-size: 24px;
-  }
-  
-  .login-btn {
-    width: 70%;
-    font-size: 36px;
-  }
-  
-  /* Form styling */
-  
-  .form-center {
-    text-align: center;
-  }
-  
-  
-  
-  
-  
+.hide {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Styling for mode bar at the bottom of the page */
+.modebar {
+  background-color: #16400a;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Style the links inside the bottom nav bar */
+.modebar a {
+  display: block;
+  float: left;
+  width: 33%;
+  color: white;
+  text-align: center;
+  padding: 2px 2px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add a gray background color to button when it is hovered */
+.modebar a:hover {
+  color: white;
+}
+
+/* Add a gray background color to the button when it is selected */
+.modebar a:active {
+  background-color: #F0F0F0;
+  color: white;
+}
+
+/* mode bar button styling when item is selected */
+.modebar-item-selected {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black !important;
+  background-color: #F0F0F0;
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.modebar .icon {
+  display: none;
+}
+
+/* Style the icons in the bottom bar */
+.modebar-icon {
+  display: block;
+  padding-top: 3px;
+  color: white;
+}
+
+.modebar-icon-selected {
+  display: block;
+  padding-top: 3px;
+  color: black;
+}
+
+/* Style the text in the bottom bar */
+.modebar-text {
+  display: block;
+  font-size: small;
+  color: white;
+}
+
+.modebar-text-selected {
+  display: block;
+  font-size: small;
+  color: black;
+}
+
+/* Style the floating action button, which is fixed in the lower right of the app */
+.floatbtn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 60px;
+  right: 40px;
+  background-color: #16400a;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.floatbtn-icon {
+  margin-top: 22px;
+  color: white;
+}
+
+.floatbtn a:visited {
+  color: white;
+}
+
+.floatbtn a:active {
+  color: white;
+}
+
+body {
+  margin: 0;
+}
+
+/* This class disables a button */
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.floatbtn a:visited {
+  color: white !important;
+}
+
+.floatbtn a:active {
+  color: white !important;
+}
+
+/* Login page styling */
+.login-text {
+  text-align: center;
+  width: 90%;
+  height: 10%;
+  font-size: 24px;
+}
+
+.login-btn {
+  width: 70%;
+  font-size: 36px;
+}
+
+/* Form styling */
+
+.form-center {
+  text-align: center;
+}

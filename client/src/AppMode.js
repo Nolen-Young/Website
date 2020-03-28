@@ -6,10 +6,10 @@ https://stackoverflow.com/questions/287903/what-is-the-preferred-syntax-for-defi
 but it will do for our purposes*/
 
 const AppMode = {
-    PROFESSIONAL: "ProfessionalMode",
-    MUSIC: "MusicMode",
-    REVIEW: "ReviewMode",
-    REVIEW_NEWREVIEW: "ReviewMode-NewReview",
+  PROFESSIONAL: "ProfessionalMode",
+  MUSIC: "MusicMode",
+  REVIEW: "ReviewMode",
+  REVIEW_NEWREVIEW: "ReviewMode-NewReview"
 };
 
 Object.freeze(AppMode); //This ensures that the object is immutable.
