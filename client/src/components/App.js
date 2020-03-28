@@ -33,6 +33,7 @@ class App extends React.Component {
   }
 
   openMenu = () => {
+    console.log("hello from openMenu")
     this.setState({menuOpen : true});
   }
   
@@ -41,7 +42,9 @@ class App extends React.Component {
   }
 
   toggleMenuOpen = () => {
-    this.setState(prevState => ({menuOpen: !prevState.menuOpen}));
+    this.setState(prevState => ({
+      menuOpen: !prevState.menuOpen
+    }));
   }
 
 
@@ -103,7 +106,7 @@ class App extends React.Component {
   render() {
     const ModePage = modeToPage[this.state.mode];
     return (
-      <div onCl ick={this.handleClick}>
+      <div onClick={this.handleClick}>
         <NavBar 
           title={modeTitle[this.state.mode]}
           mode={this.state.mode}

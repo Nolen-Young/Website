@@ -7,6 +7,7 @@ class SideMenu extends React.Component {
   //current mode, which is stored in this.prop.mode. Uses switch statement to
   //determine mode.
   renderModeMenuItems = () => {
+	console.log(this.props.mode);
     switch (this.props.mode) {
       case AppMode.PROFESSIONAL:
         return(
@@ -46,8 +47,8 @@ class SideMenu extends React.Component {
   }
 
     
-    render() {
-       return (
+	render() {
+      	return (
         <div className= {"sidemenu " + 
         (this.props.menuOpen ? "sidemenu-open" : "sidemenu-closed")} >
           {/* SIDE MENU TITLE */}
@@ -63,6 +64,6 @@ class SideMenu extends React.Component {
         </div>
         );
     }
-  }
+}
 
 export default SideMenu;
