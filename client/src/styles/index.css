@@ -20,7 +20,7 @@
   .navbar {
     overflow: hidden; /* Don't allow scrolling */
     display: block; /* Occupies its own horizontal space */
-    background-color: #005216;
+    background-color: #16400a;
     position: fixed; /* Doesn't move */
     top: 0;
     width: 100%; /* 100% of width of screen */
@@ -38,10 +38,10 @@
   /* navbarItems defines styling of items within navbar. They should be centered top-to-bottom
    with a small internal margin */
   .navbar-items {
-  display: inline-flex; 
-  align-items: center; 
-  padding-top: 5px; 
-  padding-bottom: 5px;
+    display: inline-flex; 
+    align-items: center; 
+    padding-top: 5px; 
+    padding-bottom: 5px;
   }
   
   /* sidemenu -- Styling of the side navigation menu */
@@ -51,7 +51,7 @@
     z-index: 150; /* Force the menu to be at front */
     top: 48px; /* Position menu 48 px from top of screen; accomodates top navbar */
     left: 0; /* Position the menu on the left hand side */
-    background-color: #005216; /* Background color is dark blue */
+    background-color: #16400a; /* Background color is dark blue */
     overflow-x: hidden; /* Don't allow horizontal scroll */
     transition: 0.5s; /* Animation transition time is 0.5 sec */
     padding-top: 2px; /* Place menu content 2 px from top */
@@ -71,23 +71,26 @@
   /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
   
   .sidemenu a:visited {
-  background-color:  #005216 !important;
-  color: white !important;
+    background-color:  #16400a !important;
+    color: white !important;
   }
-  
-  .sidemenu a:active {
-  background-color:  #005216 !important;
-  color: white !important;
-  }
-  
+
   .sidemenu a:hover {
     cursor: default;
     text-decoration: none;
-    color: #005216 !important;
+    color: black !important;
     background-color: #F0F0F0;
   }
+
+  .sidemenu a:active {
+    background-color:  #16400a !important;
+    color: white !important;
+  }
   
-  
+  .sidemenu {
+    color: white;
+  }
+
   /* set width to 250px when menu is open */
   .sidemenu-open {
     width: 250px;
@@ -113,16 +116,17 @@
   
   /* side menu item styling */
   .sidemenu-btn {
-  background-color: transparent;
-  border-color: #005216;
-  text-align: center;
+    background-color: transparent;
+    border-color: #16400a;
+    text-align: center;
+    color: white;
   }
   
   .sidemenu-btn-icon {
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
   }
   
   /* side menu styling when menu item selected */
@@ -130,20 +134,20 @@
          pointer-events: none;
          cursor: default;
          text-decoration: none;
-         color: #005216 !important;
+         color: #16400a !important;
          background-color: #F0F0F0;
   }
   
   /* The SpeedScore dark blue color theme  */       
   .btn-color-theme {
-        background-color: #005216;
+        background-color: #16400a;
         color: white;
     }
     
   /* The color theme when a bottom bar menu item is selected */
   .btn-alt-color-theme {
         background-color: #F0F0F0;
-        color: #005216;
+        color: #16400a;
     }
   
   /* change items to gray when disabled class is applied  */
@@ -153,8 +157,8 @@
     
   .btn-color-theme-outline {
         border: 2px;
-        border-color: #005216;
-        color: #005216;
+        border-color: #16400a;
+        color: #16400a;
   }
   
   /* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
@@ -173,7 +177,7 @@
   
   /* Styling for mode bar at the bottom of the page */
   .modebar {
-    background-color: #005216;
+    background-color: #16400a;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -192,11 +196,16 @@
     text-decoration: none;
     font-size: 17px;
   }
+
+  /* Add a gray background color to button when it is hovered */
+  .modebar a:hover {
+      color: white;
+    }
   
   /* Add a gray background color to the button when it is selected */
   .modebar a:active {
     background-color: #F0F0F0;
-    color: #005216;
+    color: white;
   }
   
   /* mode bar button styling when item is selected */
@@ -204,13 +213,8 @@
     pointer-events: none;
     cursor: default;
     text-decoration: none;
-    color: #005216 !important;
+    color: black !important;
     background-color: #F0F0F0;
-  }
-  
-  /* Add a gray background color to button when it is hovered */
-  .modebar a:hover {
-    color: #F0F0F0;
   }
   
   /* Hide the link that should open and close the navbar on small screens */
@@ -222,12 +226,26 @@
   .modebar-icon {
     display:block; 
     padding-top:3px;
+    color: white;
+  }
+
+  .modebar-icon-selected {
+    display:block; 
+    padding-top:3px;
+    color: black;
   }
   
   /* Style the text in the bottom bar */
   .modebar-text {
     display:block;
     font-size: small;
+    color: white;
+  }
+
+  .modebar-text-selected {
+    display:block;
+    font-size: small;
+    color: black;
   }
   
   /* Style the floating action button, which is fixed in the lower right of the app */
@@ -237,7 +255,7 @@
     height:60px;
     bottom:60px;
     right:40px;
-    background-color:#005216;
+    background-color:#16400a;
     color:white;
     border-radius:50px;
     text-align:center;

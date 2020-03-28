@@ -18,24 +18,36 @@ class ModeBar extends React.Component {
             (this.props.mode === AppMode.PROFESSIONAL ? " modebar-item-selected" : "")} 
             onClick={this.props.menuOpen ? null : 
               () => this.handleModeBtnClick(AppMode.PROFESSIONAL)}>
-            <span className="modebar-icon  fa fa-history"></span>
-            <span className="modebar-text">My Portfolio</span>
+            <span className={" nonMenuItem fa fa-user " + 
+            (this.props.mode === AppMode.PROFESSIONAL ? "modebar-icon-selected" : "modebar-icon")}>
+			      </span>
+            <span className={"modebar-text " + 
+            (this.props.mode === AppMode.PROFESSIONAL ? "modebar-text-selected" : "modebar-text")}>
+            My Portfolio</span>
           </a>
 
           <a className={"modebar-btn" + 
             (this.props.mode === AppMode.MUSIC ? " modebar-item-selected" : "")} 
             onClick={this.props.menuOpen ? null : 
               () => this.handleModeBtnClick(AppMode.MUSIC)}>
-            <span className="modebar-icon nonMenuItem fa fa-th-list"></span>
-            <span className="modebar-text">My Music</span>
+            <span className={" nonMenuItem fa fa-music " + 
+            (this.props.mode === AppMode.MUSIC ? "modebar-icon-selected" : "modebar-icon")}>
+			      </span>
+            <span className={"modebar-text " + 
+            (this.props.mode === AppMode.MUSIC ? "modebar-text-selected" : "modebar-text")}>
+            My Music</span>
           </a>
 
-		  <a className={"modebar-btn" + 
+		      <a className={"modebar-btn" + 
             (this.props.mode === AppMode.REVIEW ? " modebar-item-selected" : "")} 
             onClick={this.props.menuOpen ? null : 
               () => this.handleModeBtnClick(AppMode.REVIEW)}>
-            <span className="modebar-icon nonMenuItem fa fa-th-list"></span>
-            <span className="modebar-text">Reviews</span>
+			      <span className={" nonMenuItem fa fa-th-list " + 
+            (this.props.mode === AppMode.REVIEW ? "modebar-icon-selected" : "modebar-icon")}>
+			      </span>
+            <span className={"modebar-text " + 
+            (this.props.mode === AppMode.REVIEW ? "modebar-text-selected" : "modebar-text")}>
+            Reviews</span>
           </a>
         </div>
       );

@@ -13,11 +13,11 @@ class SideMenu extends React.Component {
         return(
           <div>
           	<a className="sidemenu-item">
-              <span className="fa fa-users"></span>&nbsp;About Me</a>
+              <span className="fa fa-user"></span>&nbsp;About Me</a>
           	<a className="sidemenu-item">
-              <span className="fa fa-search"></span>&nbsp;Courses</a>
+              <span className="fa fa-clipboard"></span>&nbsp;Courses</a>
 			<a className="sidemenu-item">
-              <span className="fa fa-search"></span>&nbsp;Projects</a>
+              <span className="fa fa-code"></span>&nbsp;Projects</a>
           </div>
         );
       break;
@@ -25,7 +25,7 @@ class SideMenu extends React.Component {
         return(
           <div>
             <a className="sidemenu-item">
-              <span className="fa fa-plus"></span>&nbsp;My Music</a>
+              <span className="fa fa-music"></span>&nbsp;My Music</a>
             <a className="sidemenu-item">
               <span className="fa fa-search"></span>&nbsp;Other People's Music</a>
           </div>
@@ -35,9 +35,9 @@ class SideMenu extends React.Component {
         return(
           <div>
             <a className="sidemenu-item">
-              <span className="fa fa-plus"></span>&nbsp;Reviews</a>
+              <span className="fa fa-th-list"></span>&nbsp;Reviews</a>
             <a className="sidemenu-item">
-              <span className="fa fa-search"></span>&nbsp;Leave a Review</a>
+              <span className="fa fa-plus"></span>&nbsp;Leave a Review</a>
           </div>
         );
       break;
