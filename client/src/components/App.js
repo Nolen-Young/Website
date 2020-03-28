@@ -15,17 +15,16 @@ modeTitle[AppMode.REVIEW_NEWREVIEW] = "New Review";
 
 const modeToPage = {};
 modeToPage[AppMode.PROFESSIONAL] = ProfessionalPage;
-modeToPage[AppMode.FAVORITE] = MusicPage;
-modeToPage[AppMode.FAVORITE_LOGFAVORITE] = ReviewPage;
-modeToPage[AppMode.FAVORITE_EDITFAVORITE] = ReviewPage;
+modeToPage[AppMode.MUSIC] = MusicPage;
+modeToPage[AppMode.REVIEW] = ReviewPage;
+modeToPage[AppMode.REVIEW_NEWREVIEW] = ReviewPage;
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {mode: AppMode.LOGIN,
+    this.state = {mode: AppMode.PROFESSIONAL,
                   menuOpen: false,
-                  userId: "",
                   showAbout: false};
   }
 
@@ -45,9 +44,6 @@ class App extends React.Component {
     this.setState(prevState => ({menuOpen: !prevState.menuOpen}));
   }
 
-  setUserId = (Id) => {
-    this.setState({userId: Id});
-  }
 
   //When App component mounts, add a window-level click handler to close the
   //side menu if it is open. This event should fire only if no other lower-level
@@ -56,11 +52,11 @@ class App extends React.Component {
     window.addEventListener("click",this.handleClick);
   }
 
-//We remove the event listener when the component
-//unmounts. This is a best practice. 
-componentWillUnmount() {
-  window.removeEventListener("click",this.handleClick);
-}
+  //We remove the event listener when the component
+  //unmounts. This is a best practice. 
+  componentWillUnmount() {
+    window.removeEventListener("click",this.handleClick);
+  }
 
   //When the user clicks anywhere on the app and the menu is open, close it.
   //This function takes advantage of event bubbling.
@@ -107,7 +103,7 @@ componentWillUnmount() {
   render() {
     const ModePage = modeToPage[this.state.mode];
     return (
-      <div onClick={this.handleClick}>
+      <div onCl ick={this.handleClick}>
         <NavBar 
           title={modeTitle[this.state.mode]}
           mode={this.state.mode}
@@ -118,7 +114,6 @@ componentWillUnmount() {
           mode={this.state.mode}
           menuOpen={this.state.menuOpen}
           changeMode={this.handleChangeMode}
-          userId={this.state.userId}
           showAbout={this.toggleAbout}/>
         <ModeBar 
           mode={this.state.mode} 
@@ -126,9 +121,7 @@ componentWillUnmount() {
           menuOpen={this.state.menuOpen}/>
         <ModePage menuOpen={this.state.menuOpen}
           mode={this.state.mode} 
-          changeMode={this.handleChangeMode}
-          userId={this.state.userId}
-          setUserId={this.setUserId}/>
+          changeMode={this.handleChangeMode}/>
         {this.state.showAbout ? this.renderAbout() : null}
       </div>
       );  

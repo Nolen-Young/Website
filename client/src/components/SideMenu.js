@@ -1,49 +1,68 @@
 import React from 'react';
+import AppMode from '../AppMode.js';
 
 class SideMenu extends React.Component {
-	render() {
-		return (
-		<div className="sidemenu">
-			{/* SIDE MENU TITLE */}
-			<div className="sidemenu-title">
-				<img src='http://tiny.cc/chrisprofilepic' height='50' width='50' />
-				<span id="userID" className="sidemenu-userID">&nbsp;Chris
-				Hundhausen&nbsp;&nbsp;</span>
-			</div>
-			{/* MENU CONTENT */}
-			<div>
-				<h2></h2>
-				{/*BEGIN GROUP OF MODE/ACTION BUTTONS */}
-				{/*Mode-based menu items are contextual; they provide
-				easy access to most important functionality in current mode */}
-				<a className="menu-item">
-				<span className="fa fa-list-alt"></span>&nbsp;Feed</a>
 
-				<a className="menu-item">
-				<span className="fa fa-user-friends"></span>&nbsp;Followed Users</a>
+  //renderModeItems -- Renders correct subset of mode menu items based on
+  //current mode, which is stored in this.prop.mode. Uses switch statement to
+  //determine mode.
+  renderModeMenuItems = () => {
+    switch (this.props.mode) {
+      case AppMode.PROFESSIONAL:
+        return(
+          <div>
+          	<a className="sidemenu-item">
+              <span className="fa fa-users"></span>&nbsp;About Me</a>
+          	<a className="sidemenu-item">
+              <span className="fa fa-search"></span>&nbsp;Courses</a>
+			<a className="sidemenu-item">
+              <span className="fa fa-search"></span>&nbsp;Projects</a>
+          </div>
+        );
+      break;
+      case AppMode.MUSIC:
+        return(
+          <div>
+            <a className="sidemenu-item">
+              <span className="fa fa-plus"></span>&nbsp;My Music</a>
+            <a className="sidemenu-item">
+              <span className="fa fa-search"></span>&nbsp;Other People's Music</a>
+          </div>
+        );
+	  break;
+	  case AppMode.REVIEW:
+        return(
+          <div>
+            <a className="sidemenu-item">
+              <span className="fa fa-plus"></span>&nbsp;Reviews</a>
+            <a className="sidemenu-item">
+              <span className="fa fa-search"></span>&nbsp;Leave a Review</a>
+          </div>
+        );
+      break;
+      default:
+          return null;
+      }
+  }
 
-				<a id="allRoundsItem" className="menu-item">
-				<span className="fa fa-history"></span>&nbsp;All Rounds</a>
-
-				<a id="logRoundItem" className="menu-item">
-				<span className="fa fa-plus"></span>&nbsp;Log New Round</a>
-
-				<a className="menu-item" >
-				<span className="fa fa-flag"></span>&nbsp;All Courses</a>
-
-				<a className="menu-item">
-				<span className="fa fa-plus"></span>&nbsp;Add a Course</a>
-
-				{/* The following menu items are present regardless of mode */}
-				<a id="aboutBtn" className="menu-item">
-				<span className="fa fa-info-circle"></span>&nbsp;About</a>
-
-				<a id="logOutBtn" className="menu-item">
-				<span className="fa fa-sign-out-alt"></span>&nbsp;Log Out</a>
-			</div>
-		</div>
-		);	
-	}
-}
+    
+    render() {
+       return (
+        <div className= {"sidemenu " + 
+        (this.props.menuOpen ? "sidemenu-open" : "sidemenu-closed")} >
+          {/* SIDE MENU TITLE */}
+          <div className="sidemenu-title">
+            <span className="sidemenu-userID">Nolen Young's Website</span>
+          </div>
+          {/* MENU CONTENT */}
+          {/*Mode-based menu items */}
+          {this.renderModeMenuItems()}
+          {/* Always-there menu items */}
+          <a className="sidemenu-item" onClick={this.props.showAbout}><span className="fa fa-info-circle">
+              </span>&nbsp;About</a>
+        </div>
+        );
+    }
+  }
 
 export default SideMenu;
