@@ -1,0 +1,26 @@
+{
+  "name": "nolen-young-website",
+  "version": "1.0.0",
+  "description": "A website made with react",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nolen-Young/Website.git"
+  },
+  "author": "Nolen Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nolen-Young/Website/issues"
+  },
+  "homepage": "https://github.com/Nolen-Young/Website#readme"
+}
