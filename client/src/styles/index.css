@@ -145,7 +145,6 @@
 
 /* side menu styling when menu item selected */
 .sidemenu-item-selected {
-  pointer-events: none;
   cursor: default;
   text-decoration: none;
   color: #16400a !important;

@@ -14,17 +14,24 @@ class SideMenu extends React.Component {
   // mode, which is stored in this.prop.mode. Uses switch statement to determine
   // mode.
   renderModeMenuItems = () => {
+    console.log(this.props.professionalMode)
     switch (this.props.mode) {
       case AppMode.PROFESSIONAL:
         return (
           <div>
-            <a className="sidemenu-item"
+            <a className={(this.props.professionalMode === ProfessionalPageMode.ABOUTME
+              ? " sidemenu-item-selected "
+              : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.ABOUTME)}>
               <span className="fa fa-user"></span>&nbsp;About Me</a>
-            <a className="sidemenu-item"
+            <a className={(this.props.professionalMode === ProfessionalPageMode.COURSES
+              ? " sidemenu-item-selected "
+              : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.COURSES)}>
               <span className="fa fa-clipboard"></span>&nbsp;Courses</a>
-            <a className="sidemenu-item"
+            <a className={(this.props.professionalMode === ProfessionalPageMode.PROJECTS
+              ? " sidemenu-item-selected "
+              : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.PROJECTS)}>
               <span className="fa fa-code"></span>&nbsp;Projects</a>
           </div>
