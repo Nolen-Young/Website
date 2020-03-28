@@ -52,10 +52,12 @@ class SideMenu extends React.Component {
         className={"sidemenu " + (this.props.menuOpen
         ? "sidemenu-open"
         : "sidemenu-closed")}>
+
         {/* SIDE MENU TITLE */}
         <div className="sidemenu-title">
           <span className="sidemenu-userID">Nolen Young's Website</span>
         </div>
+
         {/* MENU CONTENT */}
         {/*Mode-based menu items */}
         {this.renderModeMenuItems()}
