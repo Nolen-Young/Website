@@ -190,6 +190,15 @@
   text-align: center;
 }
 
+.right {
+  text-align: right;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 50px;
+}
+
 /* Styling for mode bar at the bottom of the page */
 .modebar {
   background-color: #16400a;

@@ -72,12 +72,14 @@ class App extends React.Component {
   }
 
   toggleAbout = () => {
+    console.log("hello from toggleAbout()")
     this.setState(prevState => ({
       showAbout: !prevState.showAbout
     }));
   }
 
   renderAbout = () => {
+    console.log("hello from renderAbout()")
     return (
       <div className="modal" role="dialog">
         <div className="modal-dialog modal-lg">
