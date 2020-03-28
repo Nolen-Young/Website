@@ -3,9 +3,10 @@ import NavBar from './NavBar.js';
 import SideMenu from './SideMenu.js';
 import ModeBar from './ModeBar.js';
 import AppMode from './../AppMode.js';
-import ProfessionalPage from './ProfessionalPage.js'
-import MusicPage from './MusicPage.js'
-import ReviewPage from './ReviewPage.js'
+import ProfessionalPage from './ProfessionalPage.js';
+import MusicPage from './MusicPage.js';
+import ReviewPage from './ReviewPage.js';
+import ProfessionalPageMode from './ProfessionalPageMode';
 
 const modeTitle = {};
 modeTitle[AppMode.PROFESSIONAL] = "My Portfolio";
@@ -25,6 +26,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       mode: AppMode.PROFESSIONAL,
+      professionalMode: ProfessionalPageMode.ABOUTME,
       menuOpen: false,
       showAbout: false
     };
@@ -32,6 +34,11 @@ class App extends React.Component {
 
   handleChangeMode = (newMode) => {
     this.setState({mode: newMode});
+  }
+
+  handleChangeProfessionalMode = (newProfessionalMode) => {
+    console.log(newProfessionalMode);
+    this.setState({professionalMode: newProfessionalMode});
   }
 
   openMenu = () => {
@@ -119,20 +126,29 @@ class App extends React.Component {
           mode={this.state.mode}
           changeMode={this.handleChangeMode}
           menuOpen={this.state.menuOpen}
-          toggleMenuOpen={this.toggleMenuOpen}/>
+          toggleMenuOpen={this.toggleMenuOpen}
+          professionalMode={this.state.professionalMode}
+          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
         <SideMenu
           mode={this.state.mode}
           menuOpen={this.state.menuOpen}
           changeMode={this.handleChangeMode}
-          showAbout={this.toggleAbout}/>
+          showAbout={this.toggleAbout}
+          professionalMode={this.state.professionalMode}
+          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
         <ModeBar
           mode={this.state.mode}
           changeMode={this.handleChangeMode}
-          menuOpen={this.state.menuOpen}/>
+          menuOpen={this.state.menuOpen}
+          professionalMode={this.state.professionalMode}
+          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
         <ModePage
           menuOpen={this.state.menuOpen}
           mode={this.state.mode}
-          changeMode={this.handleChangeMode}/> {this.state.showAbout
+          changeMode={this.handleChangeMode}
+          professionalMode={this.state.professionalMode}
+          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
+        {this.state.showAbout
           ? this.renderAbout()
           : null}
       </div>

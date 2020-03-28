@@ -1,22 +1,31 @@
 import React from 'react';
-import AppMode from '../AppMode.js';
+import AppMode from './../AppMode.js';
+import ProfessionalPageMode from './ProfessionalPageMode.js';
 
 class SideMenu extends React.Component {
+
+  handleMenuBtnClick = (newMode) => {
+    if (this.props.professionalMode !== newMode) {
+      this.props.changeProfessionalMode(newMode);
+    }
+  }
 
   // renderModeItems -- Renders correct subset of mode menu items based on current
   // mode, which is stored in this.prop.mode. Uses switch statement to determine
   // mode.
   renderModeMenuItems = () => {
-    console.log(this.props.mode);
     switch (this.props.mode) {
       case AppMode.PROFESSIONAL:
         return (
           <div>
-            <a className="sidemenu-item">
+            <a className="sidemenu-item"
+              onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.ABOUTME)}>
               <span className="fa fa-user"></span>&nbsp;About Me</a>
-            <a className="sidemenu-item">
+            <a className="sidemenu-item"
+              onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.COURSES)}>
               <span className="fa fa-clipboard"></span>&nbsp;Courses</a>
-            <a className="sidemenu-item">
+            <a className="sidemenu-item"
+              onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.PROJECTS)}>
               <span className="fa fa-code"></span>&nbsp;Projects</a>
           </div>
         );

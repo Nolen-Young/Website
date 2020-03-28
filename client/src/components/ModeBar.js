@@ -5,9 +5,7 @@ class ModeBar extends React.Component {
 
   handleModeBtnClick = (newMode) => {
     if (this.props.mode !== newMode) {
-      this
-        .props
-        .changeMode(newMode);
+      this.props.changeMode(newMode);
     }
   }
 

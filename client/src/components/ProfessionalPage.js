@@ -17,18 +17,19 @@ class ProfessionalPage extends React.Component {
     this.state = {
       mode: props.mode,
       menuOpen: props.menuOpen,
-      professionalMode: ProfessionalPageMode.ABOUTME
+      professionalMode: props.professionalMode
     };
   }
 
   render() {
+    this.state.professionalMode = this.props.professionalMode
     console.log(this.state.professionalMode)
     const ProfessionalPageRender = professionalPageModeToPage[this.state.professionalMode]
-    console.log(ProfessionalPageRender)
     return (
       <ProfessionalPageRender
           menuOpen={this.state.menuOpen}
           professionalMode={this.state.professionalMode}
+          changeProfessionalMode={this.state.handleChangeProfessionalMode}
           mode={this.state.mode}
           changeMode={this.handleChangeMode}/>
 
