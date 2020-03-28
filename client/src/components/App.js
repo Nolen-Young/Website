@@ -7,6 +7,7 @@ import ProfessionalPage from './ProfessionalPage.js';
 import MusicPage from './MusicPage.js';
 import ReviewPage from './ReviewPage.js';
 import ProfessionalPageMode from './ProfessionalPageMode';
+import './../styles/modal.css'
 
 const modeTitle = {};
 modeTitle[AppMode.PROFESSIONAL] = "My Portfolio";
@@ -88,23 +89,44 @@ class App extends React.Component {
   renderAbout = () => {
     console.log("hello from renderAbout()")
     return (
-      <div className="modal" role="dialog">
+      <div className="my-modal" role="dialog">
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header">
               <h3 className="modal-title">
-                <b>About IA5</b>
+                <b>About This Website</b>
                 <button className="close-modal-button" onClick={this.toggleAbout}>
                   &times;</button>
               </h3>
             </div>
             <div className="modal-body">
-              <h3>IA5, The world's first favorite color storing app</h3>
+              <h3>Usage</h3>
               <div style={{
                 textAlign: "left"
               }}>
                 <p>
-                  I made this app for class!
+                  The navigation menu, opened in the top left of the window, lets you view different content depending on the mode you are in.
+                </p>
+                <p>
+                  To change the website mode, select a mode amongst the modes along the bottom bar.
+                </p>
+                <p>
+                  Portfolio Mode lets you view information about myself, the courses I've taken, and the projects I have worked on. <br></br>
+                  Music Mode lets you view and listen to the music I make, as well as see some music I recommend.<br></br>
+                  Review Mode is stil under construction.
+                </p>
+              </div>
+            </div>
+            <div className="modal-body">
+              <h3>Development</h3>
+              <div style={{
+                textAlign: "left"
+              }}>
+                <p>
+                  I developed this website from scratch by myself, for myself. Here is a list of some of the technologies I used:
+                </p>
+                <p>
+                  React, Babel, Nodemon, JSX, Bootstrap, Font Awesome, VS Code, MongoDB
                 </p>
               </div>
             </div>

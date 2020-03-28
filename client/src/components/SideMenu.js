@@ -79,7 +79,7 @@ class SideMenu extends React.Component {
         {this.renderModeMenuItems()}
         {/* Always-there menu items */}
         <a className="sidemenu-item" onClick={this.props.showAbout}>
-          <span className="fa fa-info-circle"></span>&nbsp;About</a>
+          <span className="fa fa-info-circle"></span>&nbsp;About This Website</a>
       </div>
     );
   }
