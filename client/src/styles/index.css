@@ -19,16 +19,27 @@
   font-size: 32px;
 }
 
-.my-table {
+.music-table {
   width: 100%;
   text-align: left;
+  vertical-align: top;
 }
 
-.my-table-data {
-  padding: 10px;
-  vertical-align: top;
-  text-align: left;
-  width: 50%;
+.music-table-row{
+  height: 100px;
+  width: 100%;
+}
+
+.music-table-header {
+  background-color: lightgray;
+}
+
+.music-table-song-titles {
+  width: 100px;
+}
+
+.music-table-pseudonym {
+  width: 100px;
 }
 
 .profile-picture {
