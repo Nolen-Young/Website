@@ -18,7 +18,7 @@ class MusicPageMyMusic extends React.Component {
 						<tr className = "music-table-row">
 							<th className = "music-table-song-titles">Song Title</th>
 							<th className = "music-table-pseudonym">Released Under Pseudonym</th>
-							<th>Play</th>
+							<th>Link</th>
 						</tr>
 					</thead>
 					<tbody>
