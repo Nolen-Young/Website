@@ -1,5 +1,8 @@
 import React from 'react';
 
+// *****************************************************
+// This class contains the code to render the about me page.
+// ***************************************************** 
 class ProfessionalPageAboutMe extends React.Component {
 
 	render() {

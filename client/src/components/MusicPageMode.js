@@ -1,3 +1,6 @@
+// *****************************************************
+// This files defines the different modes in professional mode
+// ***************************************************** 
 const MusicPageMode = {
 	MYMUSIC: "MyMusicMode",
 	OTHERMUSIC: "OtherMusicMode",

@@ -3,16 +3,23 @@ import AppMode from './../AppMode.js';
 import ProfessionalPageMode from './ProfessionalPageMode.js';
 import MusicPageMode from './MusicPageMode.js'
 
+// *****************************************************
+// This class contains the code to render the side menu.
+// It also handles the generation of the correct menu
+// items depending on the mode, and the correct click
+// responses depending on the button.
+// ***************************************************** 
 class SideMenu extends React.Component {
 
+  // handles the menu button clicks depending on mode
   handleMenuBtnClick = (newMode) => {
     switch(this.props.mode) {
-      case AppMode.PROFESSIONAL:
+      case AppMode.PROFESSIONAL: // if mode is professional
         if (this.props.professionalMode !== newMode) {
           this.props.changeProfessionalMode(newMode);
         }
         break;
-      case AppMode.MUSIC:
+      case AppMode.MUSIC: // if mode is music
         if (this.props.musicMode !== newMode) {
           this.props.changeMusicMode(newMode);
         }
@@ -27,19 +34,24 @@ class SideMenu extends React.Component {
   // mode.
   renderModeMenuItems = () => {
     switch (this.props.mode) {
-      case AppMode.PROFESSIONAL:
+      case AppMode.PROFESSIONAL: {/* Renders side menu if mode is professional */}
         return (
           <div>
-            <a className={(this.props.professionalMode === ProfessionalPageMode.ABOUTME
+            {/* Renders side menu if professionalMode is about me */}
+            <a className={(this.props.professionalMode === ProfessionalPageMode.ABOUTME 
               ? " sidemenu-item-selected "
               : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.ABOUTME)}>
               <span className="fa fa-user"></span>&nbsp;About Me</a>
+
+            {/* Renders side menu if professionalMode is courses */}
             <a className={(this.props.professionalMode === ProfessionalPageMode.COURSES
               ? " sidemenu-item-selected "
               : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(ProfessionalPageMode.COURSES)}>
               <span className="fa fa-clipboard"></span>&nbsp;Courses</a>
+
+            {/* Renders side menu if professionalMode is Projects */}
             <a className={(this.props.professionalMode === ProfessionalPageMode.PROJECTS
               ? " sidemenu-item-selected "
               : " sidemenu-item ")}
@@ -48,21 +60,24 @@ class SideMenu extends React.Component {
           </div>
         );
         break;
-      case AppMode.MUSIC:
+      case AppMode.MUSIC: {/* Renders side menu if mode is music */}
         return (
           <div>
+            {/* Renders side menu if musicMode is my music */}
             <a className={(this.props.musicMode === MusicPageMode.MYMUSIC
               ? " sidemenu-item-selected "
               : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(MusicPageMode.MYMUSIC)}>
               <span className="fa fa-music"></span>&nbsp;Music I've Made</a>
               
+            {/* Renders side menu if musicMode is other music */}
             <a className={(this.props.musicMode === MusicPageMode.OTHERMUSIC
               ? " sidemenu-item-selected "
               : " sidemenu-item ")}
               onClick={ () => this.handleMenuBtnClick(MusicPageMode.OTHERMUSIC)}>
               <span className="fa fa-search"></span>&nbsp;Other People's Music</a>
-
+            
+            {/* Renders side menu if musicMode is TOOLS */}
             <a className={(this.props.musicMode === MusicPageMode.TOOLS
               ? " sidemenu-item-selected "
               : " sidemenu-item ")}
@@ -71,7 +86,7 @@ class SideMenu extends React.Component {
           </div>
         );
         break;
-      case AppMode.REVIEW:
+      case AppMode.REVIEW: {/* Renders side menu if mode is review */}
         return (
           <div>
             <a className="sidemenu-item">

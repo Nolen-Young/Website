@@ -1,5 +1,8 @@
 import React from 'react';
 
+// *****************************************************
+// This class contains the code to render the Review pages.
+// ***************************************************** 
 class ReviewPage extends React.Component {
 
   render() {

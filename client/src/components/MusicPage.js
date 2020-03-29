@@ -4,11 +4,15 @@ import MusicPageMyMusic from './MusicPage-MyMusic.js'
 import MusicPageOtherMusic from './MusicPage-OtherMusic.js'
 import MusicPageTools from './MusicPage-Tools.js'
 
+// defines a dictionary of modes as keys and pages as definitions
 const musicPageModeToPage = {};
 musicPageModeToPage[MusicPageMode.MYMUSIC] = MusicPageMyMusic;
 musicPageModeToPage[MusicPageMode.OTHERMUSIC] =MusicPageOtherMusic;
 musicPageModeToPage[MusicPageMode.TOOLS] = MusicPageTools;
 
+// *****************************************************
+// This class contains the code to render the music mode pages.
+// *****************************************************
 class MusicPage extends React.Component {
   constructor(props) {
     super(props);
@@ -20,9 +24,10 @@ class MusicPage extends React.Component {
   }
 
   render() {
-    this.state.musicMode = this.props.musicMode;
-    console.log(this.state.musicMode);
-    const MusicPageRender = musicPageModeToPage[this.state.musicMode];
+    this.state.musicMode = this.props.musicMode; // set state as the musicMode from app.js, passed by props
+    const MusicPageRender = musicPageModeToPage[this.state.musicMode]; // get the page to render
+
+    // renders the proper pages, passing in props
     return (
       <div className="padded-page center">
         <MusicPageRender

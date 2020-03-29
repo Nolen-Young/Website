@@ -1,5 +1,8 @@
 import React from 'react';
 
+// *****************************************************
+// This class contains the code to render the other music page.
+// *****************************************************
 class MusicPageOtherMusic extends React.Component {
 
 	render() {
