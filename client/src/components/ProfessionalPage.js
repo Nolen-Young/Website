@@ -22,9 +22,9 @@ class ProfessionalPage extends React.Component {
   }
 
   render() {
-    this.state.professionalMode = this.props.professionalMode
-    console.log(this.state.professionalMode)
-    const ProfessionalPageRender = professionalPageModeToPage[this.state.professionalMode]
+    this.state.professionalMode = this.props.professionalMode;
+    console.log(this.state.professionalMode);
+    const ProfessionalPageRender = professionalPageModeToPage[this.state.professionalMode];
     return (
       <div className = "padded-page">
         <ProfessionalPageRender
@@ -41,28 +41,6 @@ class ProfessionalPage extends React.Component {
               &copy; 2020 Nolen Young. No rights reserved.</p>
           </div>
         </div>
-
-
-      /*
-      <div className="padded-page center">
-        <div id = "header">
-          <h1>About Me</h1>
-        </div>
-
-        <div id = "body">
-          <p>
-            Hello. Welcome to my website.
-          </p>
-        </div>
-        
-        <div id = "footer" className = "bottom right">
-          <p style={{
-            fontStyle: "italic"
-          }}>
-            &copy; 2020 Nolen Young. No rights reserved.</p>
-        </div>
-      </div>
-      */
     );
   }
 }
