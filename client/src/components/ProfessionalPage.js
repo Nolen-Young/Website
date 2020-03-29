@@ -26,12 +26,21 @@ class ProfessionalPage extends React.Component {
     console.log(this.state.professionalMode)
     const ProfessionalPageRender = professionalPageModeToPage[this.state.professionalMode]
     return (
-      <ProfessionalPageRender
-          menuOpen={this.state.menuOpen}
-          professionalMode={this.state.professionalMode}
-          changeProfessionalMode={this.state.handleChangeProfessionalMode}
-          mode={this.state.mode}
-          changeMode={this.handleChangeMode}/>
+      <div className = "padded-page">
+        <ProfessionalPageRender
+            menuOpen={this.state.menuOpen}
+            professionalMode={this.state.professionalMode}
+            changeProfessionalMode={this.state.handleChangeProfessionalMode}
+            mode={this.state.mode}
+            changeMode={this.handleChangeMode}/>
+
+          <div id = "footer" className = "bottom center">
+            <p style={{
+              fontStyle: "italic"
+            }}>
+              &copy; 2020 Nolen Young. No rights reserved.</p>
+          </div>
+        </div>
 
 
       /*

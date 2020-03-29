@@ -6,6 +6,25 @@
   height: 100%;
 }
 
+.github-link {
+  font-size: 32px;
+}
+
+.my-table {
+  width: 100%;
+}
+
+.my-table-data {
+  padding: 10px;
+  vertical-align: top;
+  width: 50%;
+}
+
+.profile-picture {
+  height: 50px;
+  width: 50px;
+}
+
 /* Make an item visible */
 .visible {
   display: block;
@@ -22,7 +41,7 @@
   /* Don't allow scrolling */
   display: block;
   /* Occupies its own horizontal space */
-  background-color: #16400a;
+  background-color: #021c01;
   position: fixed;
   /* Doesn't move */
   top: 0;
@@ -61,7 +80,7 @@
   /* Position menu 48 px from top of screen; accomodates top navbar */
   left: 0;
   /* Position the menu on the left hand side */
-  background-color: #16400a;
+  background-color: #021c01;
   /* Background color is dark blue */
   overflow-x: hidden;
   /* Don't allow horizontal scroll */
@@ -85,7 +104,7 @@
 /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
 
 .sidemenu a:visited {
-  background-color: #16400a !important;
+  background-color: #021c01 !important;
   color: white !important;
 }
 
@@ -97,7 +116,7 @@
 }
 
 .sidemenu a:active {
-  background-color: #16400a !important;
+  background-color: #021c01 !important;
   color: white !important;
 }
 
@@ -131,7 +150,7 @@
 /* side menu item styling */
 .sidemenu-btn {
   background-color: transparent;
-  border-color: #16400a;
+  border-color: #021c01;
   text-align: center;
   color: white;
 }
@@ -147,20 +166,20 @@
 .sidemenu-item-selected {
   cursor: default;
   text-decoration: none;
-  color: #16400a !important;
+  color: #021c01 !important;
   background-color: #F0F0F0;
 }
 
 /* The SpeedScore dark blue color theme  */
 .btn-color-theme {
-  background-color: #16400a;
+  background-color: #021c01;
   color: white;
 }
 
 /* The color theme when a bottom bar menu item is selected */
 .btn-alt-color-theme {
   background-color: #F0F0F0;
-  color: #16400a;
+  color: #021c01;
 }
 
 /* change items to gray when disabled class is applied  */
@@ -170,13 +189,13 @@
 
 .btn-color-theme-outline {
   border: 2px;
-  border-color: #16400a;
-  color: #16400a;
+  border-color: #021c01;
+  color: #021c01;
 }
 
 /* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
 .padded-page {
-  padding: 56px 0px 56px 0px;
+  padding: 56px 50px 56px 50px;
   height: 100%;
   /* 100% of app */
 }
@@ -194,13 +213,14 @@
 }
 
 .bottom {
-  position: absolute;
-  bottom: 50px;
+  position: relative;
+  
+  bottom: 0px;
 }
 
 /* Styling for mode bar at the bottom of the page */
 .modebar {
-  background-color: #16400a;
+  background-color: #021c01;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -278,7 +298,7 @@
   height: 60px;
   bottom: 60px;
   right: 40px;
-  background-color: #16400a;
+  background-color: #021c01;
   color: white;
   border-radius: 50px;
   text-align: center;

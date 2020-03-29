@@ -35,28 +35,29 @@
 
   .modal-header {
       padding: 2px 16px;
-      background-color:#005216;
+      background-color:#021c01;
       color: white;
     }
     
     .modal-body {
       padding: 2px 16px;
-      color: #005216;
+      color: #021c01;
       text-align: center;
     }
     
     .modal-footer {
       padding: 2px 16px;
       background-color: white;
-      color:#005216;
+      color:#021c01;
       display: flex; 
       justify-content: center;
     }
   
     .close-modal-button {
-      border: 2px solid #005216;; 
-      background-color:#005216;; color: white;
-      float: right
+      border: 2px solid #021c01;
+	  background-color:#021c01;
+	  color: white;
+      float: right;
     }
 
   .close-modal-button:hover,

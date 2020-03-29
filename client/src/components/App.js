@@ -122,11 +122,12 @@ class App extends React.Component {
               <div style={{
                 textAlign: "left"
               }}>
+                <a href = "https://github.com/Nolen-Young/Website">GitHub repository</a>
                 <p>
                   I developed this website from scratch by myself, for myself. Here is a list of some of the technologies I used:
                 </p>
                 <p>
-                  React, Babel, Nodemon, JSX, Bootstrap, Font Awesome, VS Code, MongoDB
+                  HTML, CSS, Javascript, Git, React, Babel, Nodemon, JSX, Bootstrap, Font Awesome, VS Code, MongoDB
                 </p>
               </div>
             </div>

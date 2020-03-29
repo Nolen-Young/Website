@@ -4,23 +4,54 @@ class ProfessionalPageCourses extends React.Component {
 
 	render() {
 	  return (
-		<div className="padded-page center">
-		  <div id = "header">
+		<div>
+		  <div id = "header" className = "center">
 			<h1>Courses</h1>
-			<h2>Page under construction</h2>
 		  </div>
   
 		  <div id = "body">
-			<p>
-			  Hello. Welcome to my website.
-			</p>
-		  </div>
-		  
-		  <div id = "footer" className = "bottom right">
-			<p style={{
-			  fontStyle: "italic"
-			}}>
-			  &copy; 2020 Nolen Young. No rights reserved.</p>
+			<h3>
+				Relevent Courses
+			</h3>
+
+			<table className = "my-table">
+				<tr>
+					<td>Algorithmic Problem Solving</td>
+					<td>Professional Skills Computing Engineering</td>
+				</tr>
+				<tr>
+					<td>Program Design and Development C/C++ </td>
+					<td>Introduction to Data Mining</td>
+				</tr>
+				<tr>
+					<td>Data Structures C/C++</td>
+					<td>Object Oriented Software Principles</td>
+				</tr>
+				<tr>
+					<td>Advanced Data Structures C/C++</td>
+					<td>Software Engineering 1</td>
+				</tr>
+				<tr>
+					<td>Introduction to Computer Architecture</td>
+					<td>Programming Language Design</td>
+				</tr>
+				<tr>
+					<td>Big Data</td>
+					<td>Senior Design 1 + 2 </td>
+				</tr>
+				<tr>
+					<td>Formal Languages and Automata</td>
+					<td>Introduction to Parallel Computing</td>
+				</tr>
+				<tr>
+					<td>Algorithm Design and Analysis</td>
+					<td>Mobile Application Development </td>
+				</tr>
+				<tr>
+					<td>Web Development</td>
+					<td>Systems</td>
+				</tr>
+			</table>
 		  </div>
 		</div>
 	  );
