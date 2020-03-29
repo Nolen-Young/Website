@@ -24,6 +24,8 @@ class ProfessionalPageProjects extends React.Component {
 							Currently, the production build does not contain any server, but I am working on that in my free time and it is coming soon.
 						</p>
 					</td>
+				</tr>
+				<tr>
 					<td className = "my-table-data"> 
 						<h5>ArduPilot Mission Planner 3D Viewer and VR</h5>
 						<div className = "github-link"><a  href = "https://github.com/Mission-Planner-3D/3D-Viewer" className = "fa fa-github fa-9x"></a></div>
@@ -60,6 +62,8 @@ class ProfessionalPageProjects extends React.Component {
 							used free or reduced lunch or not.
 						</p>
 					</td>
+				</tr>
+				<tr>
 					<td className = "my-table-data"> 
 						<h5>Smile Social Media Platform</h5>
 						<div className = "github-link"><a  href = "insert github repo link here" className = "fa fa-github fa-9x"></a></div>
@@ -82,6 +86,8 @@ class ProfessionalPageProjects extends React.Component {
 							tree algorithms, and more. The library I build up of these algorithms is some of my favorite work.
 						</p>
 					</td>
+				</tr>
+				<tr>
 					<td className = "my-table-data"> 
 						<h5>The Rest of My School Work</h5>
 						<div className = "github-link"><a  href = "insert github repo link here" className = "fa fa-github fa-9x"></a></div>
