@@ -6,17 +6,28 @@
   height: 100%;
 }
 
+.react-player {
+  display: block;
+  width: 100%;
+}
+
+.music-players {
+  text-align: left;
+}
+
 .github-link {
   font-size: 32px;
 }
 
 .my-table {
   width: 100%;
+  text-align: left;
 }
 
 .my-table-data {
   padding: 10px;
   vertical-align: top;
+  text-align: left;
   width: 50%;
 }
 

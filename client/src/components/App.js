@@ -8,6 +8,7 @@ import MusicPage from './MusicPage.js';
 import ReviewPage from './ReviewPage.js';
 import ProfessionalPageMode from './ProfessionalPageMode';
 import './../styles/modal.css'
+import MusicPageMode from './MusicPageMode'
 
 const modeTitle = {};
 modeTitle[AppMode.PROFESSIONAL] = "My Portfolio";
@@ -28,6 +29,7 @@ class App extends React.Component {
     this.state = {
       mode: AppMode.PROFESSIONAL,
       professionalMode: ProfessionalPageMode.ABOUTME,
+      musicMode: MusicPageMode.MYMUSIC,
       menuOpen: false,
       showAbout: false
     };
@@ -38,8 +40,11 @@ class App extends React.Component {
   }
 
   handleChangeProfessionalMode = (newProfessionalMode) => {
-    console.log(newProfessionalMode);
     this.setState({professionalMode: newProfessionalMode});
+  }
+
+  handleChangeMusicMode = (newMusicMode) => {
+    this.setState({musicMode: newMusicMode});
   }
 
   openMenu = () => {
@@ -80,14 +85,12 @@ class App extends React.Component {
   }
 
   toggleAbout = () => {
-    console.log("hello from toggleAbout()")
     this.setState(prevState => ({
       showAbout: !prevState.showAbout
     }));
   }
 
   renderAbout = () => {
-    console.log("hello from renderAbout()")
     return (
       <div className="my-modal" role="dialog">
         <div className="modal-dialog modal-lg">
@@ -151,26 +154,34 @@ class App extends React.Component {
           menuOpen={this.state.menuOpen}
           toggleMenuOpen={this.toggleMenuOpen}
           professionalMode={this.state.professionalMode}
-          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
+          changeProfessionalMode={this.handleChangeProfessionalMode}
+          musicMode={this.state.musicMode}
+          changeMusicMode={this.handleChangeMusicMode}/> 
         <SideMenu
           mode={this.state.mode}
           menuOpen={this.state.menuOpen}
           changeMode={this.handleChangeMode}
           showAbout={this.toggleAbout}
           professionalMode={this.state.professionalMode}
-          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
+          changeProfessionalMode={this.handleChangeProfessionalMode}
+          musicMode={this.state.musicMode}
+          changeMusicMode={this.handleChangeMusicMode}/> 
         <ModeBar
           mode={this.state.mode}
           changeMode={this.handleChangeMode}
           menuOpen={this.state.menuOpen}
           professionalMode={this.state.professionalMode}
-          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
+          changeProfessionalMode={this.handleChangeProfessionalMode}
+          musicMode={this.state.musicMode}
+          changeMusicMode={this.handleChangeMusicMode}/> 
         <ModePage
           menuOpen={this.state.menuOpen}
           mode={this.state.mode}
           changeMode={this.handleChangeMode}
           professionalMode={this.state.professionalMode}
-          changeProfessionalMode={this.handleChangeProfessionalMode}/> 
+          changeProfessionalMode={this.handleChangeProfessionalMode}
+          musicMode={this.state.musicMode}
+          changeMusicMode={this.handleChangeMusicMode}/> 
         {this.state.showAbout
           ? this.renderAbout()
           : null}

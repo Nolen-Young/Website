@@ -1,12 +1,24 @@
 import React from 'react';
 import AppMode from './../AppMode.js';
 import ProfessionalPageMode from './ProfessionalPageMode.js';
+import MusicPageMode from './MusicPageMode.js'
 
 class SideMenu extends React.Component {
 
   handleMenuBtnClick = (newMode) => {
-    if (this.props.professionalMode !== newMode) {
-      this.props.changeProfessionalMode(newMode);
+    switch(this.props.mode) {
+      case AppMode.PROFESSIONAL:
+        if (this.props.professionalMode !== newMode) {
+          this.props.changeProfessionalMode(newMode);
+        }
+        break;
+      case AppMode.MUSIC:
+        if (this.props.musicMode !== newMode) {
+          this.props.changeMusicMode(newMode);
+        }
+        break;
+      default:
+        break;
     }
   }
 
@@ -14,7 +26,6 @@ class SideMenu extends React.Component {
   // mode, which is stored in this.prop.mode. Uses switch statement to determine
   // mode.
   renderModeMenuItems = () => {
-    console.log(this.props.professionalMode)
     switch (this.props.mode) {
       case AppMode.PROFESSIONAL:
         return (
@@ -40,10 +51,23 @@ class SideMenu extends React.Component {
       case AppMode.MUSIC:
         return (
           <div>
-            <a className="sidemenu-item">
-              <span className="fa fa-music"></span>&nbsp;My Music</a>
-            <a className="sidemenu-item">
+            <a className={(this.props.musicMode === MusicPageMode.MYMUSIC
+              ? " sidemenu-item-selected "
+              : " sidemenu-item ")}
+              onClick={ () => this.handleMenuBtnClick(MusicPageMode.MYMUSIC)}>
+              <span className="fa fa-music"></span>&nbsp;Music I've Made</a>
+              
+            <a className={(this.props.musicMode === MusicPageMode.OTHERMUSIC
+              ? " sidemenu-item-selected "
+              : " sidemenu-item ")}
+              onClick={ () => this.handleMenuBtnClick(MusicPageMode.OTHERMUSIC)}>
               <span className="fa fa-search"></span>&nbsp;Other People's Music</a>
+
+            <a className={(this.props.musicMode === MusicPageMode.TOOLS
+              ? " sidemenu-item-selected "
+              : " sidemenu-item ")}
+              onClick={ () => this.handleMenuBtnClick(MusicPageMode.TOOLS)}>
+              <span className="fa fa-wrench"></span>&nbsp;Production Tools</a>
           </div>
         );
         break;
