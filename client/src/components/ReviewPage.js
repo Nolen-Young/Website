@@ -13,7 +13,6 @@ class ReviewPage extends React.Component {
         <p style={{
           fontStyle: "italic"
         }}>
-          IA5 Web App<br/>
           &copy; 2020 Nolen Young. No rights reserved.</p>
       </div>
     );
