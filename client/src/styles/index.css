@@ -222,7 +222,9 @@
 
 /* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
 .padded-page {
+  margin: auto;
   padding: 56px 50px 56px 50px;
+  max-width: 1080px;
   height: 100%;
   /* 100% of app */
 }

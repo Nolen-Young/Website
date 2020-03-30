@@ -12,7 +12,7 @@ class ProfessionalPageCourses extends React.Component {
           <h1>Courses</h1>
         </div>
 
-        <div id="body">
+        <div id="body" className = "center">
           <h3>
             Relevent Courses
           </h3>
