@@ -1,14 +1,20 @@
 import React from 'react';
 import AppMode from '../AppMode.js';
 
+
+// *****************************************************
+// This class defines the rendering of the bottom mode bar
+// ***************************************************** 
 class ModeBar extends React.Component {
 
+  // handler for when a mode bar item is clicked
   handleModeBtnClick = (newMode) => {
     if (this.props.mode !== newMode) {
       this.props.changeMode(newMode);
     }
   }
 
+  // render the bar and each button in the bar
   render() {
     return (
       <div

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// *****************************************************
+// This class contains the code to render the Review pages.
+// ***************************************************** 
 class ReviewPage extends React.Component {
 
   render() {
@@ -10,7 +13,6 @@ class ReviewPage extends React.Component {
         <p style={{
           fontStyle: "italic"
         }}>
-          IA5 Web App<br/>
           &copy; 2020 Nolen Young. No rights reserved.</p>
       </div>
     );

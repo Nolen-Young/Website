@@ -10,12 +10,14 @@ import ProfessionalPageMode from './ProfessionalPageMode';
 import './../styles/modal.css'
 import MusicPageMode from './MusicPageMode'
 
+// defines a dictionary with modes as keys and page titles as definitions
 const modeTitle = {};
 modeTitle[AppMode.PROFESSIONAL] = "My Portfolio";
 modeTitle[AppMode.MUSIC] = "My Music";
 modeTitle[AppMode.REVIEW] = "Reviews";
 modeTitle[AppMode.REVIEW_NEWREVIEW] = "New Review";
 
+// defines a dictionary with modes as keys and pages as definition
 const modeToPage = {};
 modeToPage[AppMode.PROFESSIONAL] = ProfessionalPage;
 modeToPage[AppMode.MUSIC] = MusicPage;
@@ -23,7 +25,6 @@ modeToPage[AppMode.REVIEW] = ReviewPage;
 modeToPage[AppMode.REVIEW_NEWREVIEW] = ReviewPage;
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -35,27 +36,33 @@ class App extends React.Component {
     };
   }
 
+  // handles a mode bar button press to change modes
   handleChangeMode = (newMode) => {
     this.setState({mode: newMode});
   }
 
+  // handles a sidebar menu button press in professional mode
   handleChangeProfessionalMode = (newProfessionalMode) => {
     this.setState({professionalMode: newProfessionalMode});
   }
 
+  // handles a sidebar menu button press in music mode
   handleChangeMusicMode = (newMusicMode) => {
     this.setState({musicMode: newMusicMode});
   }
 
+  // handles opening the menu
   openMenu = () => {
     console.log("hello from openMenu")
     this.setState({menuOpen: true});
   }
 
+  // handles closing the menu
   closeMenu = () => {
     this.setState({menuOpen: false});
   }
 
+  // toggles the state of menu open
   toggleMenuOpen = () => {
     this.setState(prevState => ({
       menuOpen: !prevState.menuOpen
@@ -84,12 +91,14 @@ class App extends React.Component {
     event.stopPropagation();
   }
 
+  // opens the about modal dialog
   toggleAbout = () => {
     this.setState(prevState => ({
       showAbout: !prevState.showAbout
     }));
   }
 
+  // renders the about modal box
   renderAbout = () => {
     return (
       <div className="my-modal" role="dialog">
@@ -143,8 +152,11 @@ class App extends React.Component {
     );
   }
 
+  // renders the app
   render() {
-    const ModePage = modeToPage[this.state.mode];
+    const ModePage = modeToPage[this.state.mode]; // get the current page to be rendered
+    // render navbar, side menu, mode bar, and the proper page
+    // renders about if show about is true
     return (
       <div onClick={this.handleClick}>
         <NavBar

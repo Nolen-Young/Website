@@ -1,20 +1,22 @@
 import React from 'react';
 import AppMode from '../AppMode.js';
 
+
+// *****************************************************
+// This class defines the rendering of the top nav bar
+// ***************************************************** 
 class NavBar extends React.Component {
 
+  // handles what to do when the menu button is clicked
   handleMenuBtnClick = () => {
     if (this.props.mode === AppMode.REVIEW_NEWREVIEW) {
-      this
-        .props
-        .changeMode(AppMode.REVIEW);
+      this.props.changeMode(AppMode.REVIEW);
     } else {
-      this
-        .props
-        .toggleMenuOpen();
+      this.props.toggleMenuOpen();
     }
   }
 
+  // displays the proper menu button icon depending on state
   getMenuBtnIcon = () => {
     if (this.props.mode === AppMode.REVIEW_NEWREVIEW) 
       return "fa fa-arrow-left";

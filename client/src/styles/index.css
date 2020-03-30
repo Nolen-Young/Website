@@ -15,20 +15,36 @@
   text-align: left;
 }
 
-.github-link {
+.links {
   font-size: 32px;
 }
 
-.my-table {
-  width: 100%;
-  text-align: left;
+.link {
+  display: inline-block;
+  padding-right: 10px;
 }
 
-.my-table-data {
-  padding: 10px;
-  vertical-align: top;
+.music-table {
+  width: 100%;
   text-align: left;
-  width: 50%;
+  vertical-align: top;
+}
+
+.music-table-row{
+  height: 100px;
+  width: 100%;
+}
+
+.music-table-header {
+  background-color: lightgray;
+}
+
+.music-table-song-titles {
+  width: 100px;
+}
+
+.music-table-pseudonym {
+  width: 100px;
 }
 
 .profile-picture {
