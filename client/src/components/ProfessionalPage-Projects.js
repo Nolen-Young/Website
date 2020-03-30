@@ -1,9 +1,8 @@
 import React from 'react';
 
-
-// *****************************************************
-// This class contains the code to render the projects page.
 // ***************************************************** 
+// This class contains the code to render the projects page.
+// *****************************************************
 class ProfessionalPageProjects extends React.Component {
   render() {
     return (
@@ -16,8 +15,9 @@ class ProfessionalPageProjects extends React.Component {
           <h3>Personal Projects</h3>
 
           <h5>This Website</h5>
-          <div className="github-link">
-            <a href="https://github.com/Nolen-Young/Website" className="fa fa-github"></a>
+          <div className="links">
+            <a href="https://github.com/Nolen-Young/Website" 
+            className="fa fa-github link"></a>
           </div>
           <p>
             I built this website on my own, using knowledge that I had gained from a few of
@@ -33,10 +33,10 @@ class ProfessionalPageProjects extends React.Component {
           </p>
 
           <h5>ArduPilot Mission Planner 3D Viewer and VR</h5>
-          <div className="github-link">
+          <div className="links">
             <a
               href="https://github.com/Mission-Planner-3D/3D-Viewer"
-              className="fa fa-github fa-9x"></a>
+              className="fa fa-github fa-9x link"></a>
           </div>
           <p>
             For my capstone projected I, and three other students, decided to work on
@@ -63,10 +63,10 @@ class ProfessionalPageProjects extends React.Component {
           <h3>Some School Projects</h3>
 
           <h5>Student Attributes and Grades Data Mining</h5>
-          <div className="github-link">
+          <div className="links">
             <a
               href="https://github.com/Nolen-Young/CptS315/tree/master/project"
-              className="fa fa-github fa-9x"></a>
+              className="fa fa-github fa-9x link"/>
           </div>
           <p>
             Using Python with some packages, I was able to run market-basket analysis on a
@@ -76,8 +76,9 @@ class ProfessionalPageProjects extends React.Component {
           </p>
 
           <h5>Smile Social Media Platform</h5>
-          <div className="github-link">
-            <a href="https://github.com/Nolen-Young/CptS322" className="fa fa-github fa-9x"></a>
+          <div className="links">
+            <a href="https://github.com/Nolen-Young/CptS322"
+            className="fa fa-github fa-9x link"/>
           </div>
           <p>
             For my CptS 355 class, I made a working social media platform called Smile. It
@@ -87,8 +88,9 @@ class ProfessionalPageProjects extends React.Component {
             Jquery, HTML, and CSS to develope the whole thing.
           </p>
           <h5>Parallel Computing Algorithms</h5>
-          <div className="github-link">
-            <a href="https://github.com/Nolen-Young/CptS411" className="fa fa-github fa-9x"></a>
+          <div className="links">
+            <a href="https://github.com/Nolen-Young/CptS411" 
+            className="fa fa-github fa-9x link"/>
           </div>
           <p>
             In my parallel computing class, I had to write many parallel programming
@@ -98,8 +100,10 @@ class ProfessionalPageProjects extends React.Component {
             build up of these algorithms is some of my favorite work.
           </p>
           <h5>The Rest of My School Work</h5>
-          <div className="github-link">
-            <a href="https://github.com/Nolen-Young?tab=repositories" className="fa fa-github fa-9x"></a>
+          <div className="links">
+            <a
+              href="https://github.com/Nolen-Young?tab=repositories"
+              className="fa fa-github fa-9x link"/>
           </div>
           <p>
             I have done many projects in my time at WSU. You can see most of the work I have
