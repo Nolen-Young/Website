@@ -1,26 +1,15 @@
-// import
-const express = require('express'); 
-const cors = require('cors');
-const mongoose = require('mongoose');
-require('dotenv').config();
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const app = express()
+const apiPort = 3000
 
-const app = express(); // set up express
-const port = process.env.PORT || 5000; // grab our port
-
-app.use(cors()); // set up cors
-app.use(express.json()); // set up json
-
-const uri = process.env.ATLAS_URI; // get uri form .env
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }); // connect to MongoDB
-const connection = mongoose.connection;
-connection.once('open', () => { // check connection
-	console.log("MongoDB databse connection established.");
-});
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors())
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.send("Connected to Server");
-});
+    res.send('Hello World!')
+})
 
-app.listen(port, () => { 
-	console.log('Server running on port: ' + port);
-});
+app.listen(apiPort, () => console.log('Server running on port 3000'))
