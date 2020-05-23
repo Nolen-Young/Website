@@ -1,0 +1,23 @@
+const router = require('express').Router();
+let BlogPost = require('../models/blogpost.model');
+
+router.route('/').get((req, res) => {
+	BlogPost.find()
+		.then(blogPosts => res.json(blogPosts))
+		.catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/add').post((req, res) => {
+	const title = req.body.title;
+	const content = req.body.content;
+	//const date = Date.parse(req.body.date);
+
+	//const newPost = new Post({ title, content, date });
+	const newBlogPost = new BlogPost({ title, content });
+
+	newBlogPost.save()
+		.then(() => res.json('Posted successfully'))
+		.catch(err => res.status(400).json('Error: ' + err));
+});
+
+module.exports = router;

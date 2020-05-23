@@ -17,10 +17,11 @@ connection.once('open', () => { // check connection
 	console.log("MongoDB databse connection established.");
 });
 
-app.get('/', (req, res) => {
-    res.send("Connected to Server");
-});
+// routes
+const blogPostsRouter = require('./routes/blogposts');
+app.use('/blog', blogPostsRouter)
 
+// run
 app.listen(port, () => { 
 	console.log('Server running on port: ' + port);
 });
