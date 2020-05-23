@@ -11,13 +11,12 @@ class BlogTable extends React.Component {
 
   renderTable = () => {
     let table = [];
-    // console.log("LENGTH: " + this.props.posts.length); console.log("USERID? : " +
-    // this.props.post_userID);
+    console.log("LENGTH: " + this.props.posts.length);
     for (let p = 0; p < this.props.posts.length; ++p) {
       table.push(
         <tr key={p}>
-          <h3>Title</h3>
-          <body>Body of the blog post</body>
+          <h4>{this.props.posts[p][0]}</h4>
+          <body>{this.props.posts[p][1]}</body>
         </tr>
       );
     }
