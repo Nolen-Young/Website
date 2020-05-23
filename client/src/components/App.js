@@ -5,7 +5,7 @@ import ModeBar from './ModeBar.js';
 import AppMode from './../AppMode.js';
 import ProfessionalPage from './ProfessionalPage.js';
 import MusicPage from './MusicPage.js';
-import ReviewPage from './ReviewPage.js';
+import BlogPage from './BlogPage.js';
 import ProfessionalPageMode from './ProfessionalPageMode';
 import './../styles/modal.css'
 import MusicPageMode from './MusicPageMode'
@@ -14,15 +14,13 @@ import MusicPageMode from './MusicPageMode'
 const modeTitle = {};
 modeTitle[AppMode.PROFESSIONAL] = "My Portfolio";
 modeTitle[AppMode.MUSIC] = "My Music";
-modeTitle[AppMode.REVIEW] = "Reviews";
-modeTitle[AppMode.REVIEW_NEWREVIEW] = "New Review";
+modeTitle[AppMode.BLOG] = "Nolen Young's Blog";
 
 // defines a dictionary with modes as keys and pages as definition
 const modeToPage = {};
 modeToPage[AppMode.PROFESSIONAL] = ProfessionalPage;
 modeToPage[AppMode.MUSIC] = MusicPage;
-modeToPage[AppMode.REVIEW] = ReviewPage;
-modeToPage[AppMode.REVIEW_NEWREVIEW] = ReviewPage;
+modeToPage[AppMode.BLOG] = BlogPage;
 
 class App extends React.Component {
   constructor(props) {
@@ -125,7 +123,7 @@ class App extends React.Component {
                 <p>
                   Portfolio Mode lets you view information about myself, the courses I've taken, and the projects I have worked on. <br></br>
                   Music Mode lets you view and listen to the music I make, as well as see some music I recommend.<br></br>
-                  Review Mode is stil under construction.
+                  Blog Mode while show you my blog, where I will be posting life updates, music rants, ideas, really whatever I want, (somewhat) regularly.
                 </p>
               </div>
             </div>

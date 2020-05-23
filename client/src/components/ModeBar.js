@@ -59,21 +59,21 @@ class ModeBar extends React.Component {
         </button>
 
         <button
-          className={"modebar-btn" + (this.props.mode === AppMode.REVIEW
+          className={"modebar-btn" + (this.props.mode === AppMode.BLOG
           ? " modebar-item-selected"
           : "")}
           onClick={this.props.menuOpen
           ? null
-          : () => this.handleModeBtnClick(AppMode.REVIEW)}>
+          : () => this.handleModeBtnClick(AppMode.BLOG)}>
           <span
-            className={" nonMenuItem fa fa-th-list " + (this.props.mode === AppMode.REVIEW
+            className={" nonMenuItem fa fa-th-list " + (this.props.mode === AppMode.BLOG
             ? "modebar-icon-selected"
             : "modebar-icon")}></span>
           <span
-            className={"modebar-text " + (this.props.mode === AppMode.REVIEW
+            className={"modebar-text " + (this.props.mode === AppMode.BLOG
             ? "modebar-text-selected"
             : "modebar-text")}>
-            Reviews</span>
+            Blog</span>
         </button>
       </div>
     );
