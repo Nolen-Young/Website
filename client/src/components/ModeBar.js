@@ -22,7 +22,7 @@ class ModeBar extends React.Component {
         ? " invisible"
         : " visible")}>
 
-        <a
+        <button
           className={"modebar-btn" + (this.props.mode === AppMode.PROFESSIONAL
           ? " modebar-item-selected"
           : "")}
@@ -30,7 +30,7 @@ class ModeBar extends React.Component {
           ? null
           : () => this.handleModeBtnClick(AppMode.PROFESSIONAL)}>
           <span
-            className={" nonMenuItem fa fa-user " + (this.props.mode === AppMode.PROFESSIONAL
+            className={"nonMenuItem fa fa-user " + (this.props.mode === AppMode.PROFESSIONAL
             ? "modebar-icon-selected"
             : "modebar-icon")}></span>
           <span
@@ -38,9 +38,9 @@ class ModeBar extends React.Component {
             ? "modebar-text-selected"
             : "modebar-text")}>
             My Portfolio</span>
-        </a>
+        </button>
 
-        <a
+        <button
           className={"modebar-btn" + (this.props.mode === AppMode.MUSIC
           ? " modebar-item-selected"
           : "")}
@@ -56,9 +56,9 @@ class ModeBar extends React.Component {
             ? "modebar-text-selected"
             : "modebar-text")}>
             My Music</span>
-        </a>
+        </button>
 
-        <a
+        <button
           className={"modebar-btn" + (this.props.mode === AppMode.REVIEW
           ? " modebar-item-selected"
           : "")}
@@ -74,7 +74,7 @@ class ModeBar extends React.Component {
             ? "modebar-text-selected"
             : "modebar-text")}>
             Reviews</span>
-        </a>
+        </button>
       </div>
     );
   }

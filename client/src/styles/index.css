@@ -85,7 +85,7 @@
 }
 
 .navbar-title {
-  color: white;
+  color: #F0F0F0;
   font-size: 18px;
 }
 
@@ -121,37 +121,34 @@
 }
 
 /* applies only to an anchor tag that's a child of a sidenav element. */
-.sidemenu a {
+.sidemenu button {
   padding: 16px 8px 16px 32px;
   text-decoration: none;
   font-size: 16px;
-  color: white;
+  color: #F0F0F0;;
+  background-color: #021c01;
   display: block;
+  width: 100%;
   transition: 0.3s;
+  border: none;
 }
 
 
 /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
-
-.sidemenu a:visited {
-  background-color: #021c01 !important;
-  color: white !important;
-}
-
-.sidemenu a:hover {
-  cursor: default;
+.sidemenu button:hover {
+  cursor: pointer;
   text-decoration: none;
   color: black !important;
-  background-color: #F0F0F0;
+  background-color: #F0F0F0; 
 }
 
-.sidemenu a:active {
-  background-color: #021c01 !important;
-  color: white !important;
+.sidemenu button:active {
+  background-color: #F0F0F0 !important;
+  color: black !important;
 }
 
 .sidemenu {
-  color: white;
+  color: #F0F0F0;
 }
 
 /* set width to 250px when menu is open */
@@ -169,12 +166,12 @@
    element that's a child of sidemenu element. */
 .sidemenu .sidemenu-title {
   margin-bottom: 2px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #F0F0F0;
 }
 
 .sidemenu .sidemenu-userID {
   font-size: 14px;
-  color: white;
+  color: #F0F0F0;
 }
 
 /* side menu item styling */
@@ -182,11 +179,11 @@
   background-color: transparent;
   border-color: #021c01;
   text-align: center;
-  color: white;
+  color: #F0F0F0;
 }
 
 .sidemenu-btn-icon {
-  color: white;
+  color: #F0F0F0;
   font-size: 30px;
   cursor: pointer;
   text-align: center;
@@ -195,15 +192,14 @@
 /* side menu styling when menu item selected */
 .sidemenu-item-selected {
   cursor: default;
-  text-decoration: none;
-  color: #021c01 !important;
-  background-color: #F0F0F0;
+  color: black !important;
+  background-color: #F0F0F0 !important;
 }
 
 /* The SpeedScore dark blue color theme  */
 .btn-color-theme {
   background-color: #021c01;
-  color: white;
+  color: #F0F0F0;
 }
 
 /* The color theme when a bottom bar menu item is selected */
@@ -261,35 +257,35 @@
 }
 
 /* Style the links inside the bottom nav bar */
-.modebar a {
+.modebar button {
   display: block;
   float: left;
   width: 33%;
-  color: white;
+  background-color: #021c01;
   text-align: center;
-  padding: 2px 2px;
   text-decoration: none;
   font-size: 17px;
+  border: none;
 }
 
 /* Add a gray background color to button when it is hovered */
-.modebar a:hover {
-  color: white;
+.modebar button:hover {
+  color: black !important;
+  background-color: #F0F0F0;
 }
 
 /* Add a gray background color to the button when it is selected */
-.modebar a:active {
-  background-color: #F0F0F0;
-  color: white;
+.modebar button:active {
+  background-color: #F0F0F0 ;
+  color: black !important;
 }
 
 /* mode bar button styling when item is selected */
 .modebar-item-selected {
   pointer-events: none;
   cursor: default;
-  text-decoration: none;
   color: black !important;
-  background-color: #F0F0F0;
+  background-color: #F0F0F0 !important;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -301,7 +297,7 @@
 .modebar-icon {
   display: block;
   padding-top: 3px;
-  color: white;
+  color: #F0F0F0;
 }
 
 .modebar-icon-selected {
@@ -314,7 +310,7 @@
 .modebar-text {
   display: block;
   font-size: small;
-  color: white;
+  color: #F0F0F0;
 }
 
 .modebar-text-selected {
@@ -331,7 +327,7 @@
   bottom: 60px;
   right: 40px;
   background-color: #021c01;
-  color: white;
+  color: #F0F0F0;
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
@@ -339,15 +335,15 @@
 
 .floatbtn-icon {
   margin-top: 22px;
-  color: white;
+  color: #F0F0F0;
 }
 
 .floatbtn a:visited {
-  color: white;
+  color: #F0F0F0;
 }
 
 .floatbtn a:active {
-  color: white;
+  color: #F0F0F0;
 }
 
 body {
@@ -361,11 +357,11 @@ body {
 }
 
 .floatbtn a:visited {
-  color: white !important;
+  color: #F0F0F0 !important;
 }
 
 .floatbtn a:active {
-  color: white !important;
+  color: #F0F0F0 !important;
 }
 
 /* Login page styling */

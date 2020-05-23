@@ -25,6 +25,7 @@ class MusicPage extends React.Component {
 
   render() {
     this.state.musicMode = this.props.musicMode; // set state as the musicMode from app.js, passed by props
+    //this.setState({musicMode: this.props.musicMode});
     const MusicPageRender = musicPageModeToPage[this.state.musicMode]; // get the page to render
 
     // renders the proper pages, passing in props
