@@ -10,7 +10,7 @@ class ProfessionalPageAboutMe extends React.Component {
       <div>
         <div id="header " className="center">
           <h1>About Me</h1>
-          <img src="that good pic.jpg" width="200" height="200"></img>
+          <img src="that good pic.jpg" alt = "" width="200" height="200"></img>
         </div>
 
         <div id="body">
@@ -42,15 +42,15 @@ class ProfessionalPageAboutMe extends React.Component {
             High School in 2016.
           </p>
           <p className = "links">
-            <a href="https://github.com/Nolen-Young" className = "fa fa-github link" ></a>
+            <a href="https://github.com/Nolen-Young" className = "fa fa-github link" ><br/></a>
 			
-            <a href="https://www.linkedin.com/in/nolen-young/" className = "fa fa-linkedin link"></a>
+            <a href="https://www.linkedin.com/in/nolen-young/" className = "fa fa-linkedin link"><br/></a>
 
-			<a href="https://www.instagram.com/noleny/" className = "fa fa-instagram link"></a>
+			<a href="https://www.instagram.com/noleny/" className = "fa fa-instagram link"><br/></a>
 
-			<a href="https://soundcloud.com/southofsound" className = "fa fa-soundcloud link"></a>
+			<a href="https://soundcloud.com/southofsound" className = "fa fa-soundcloud link"><br/></a>
 
-			<a href="https://soundcloud.com/user-243943999" className = "fa fa-soundcloud link"></a>
+			<a href="https://soundcloud.com/user-243943999" className = "fa fa-soundcloud link"><br/></a>
           </p>
         </div>
       </div>
