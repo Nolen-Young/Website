@@ -11,7 +11,7 @@ app.use(cors()); // set up cors
 app.use(express.json()); // set up json
 
 const uri = process.env.ATLAS_URI; // get uri form .env
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }); // connect to MongoDB
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true },); // connect to MongoDB
 const connection = mongoose.connection;
 connection.once('open', () => { // check connection
 	console.log("MongoDB databse connection established.");
