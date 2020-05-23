@@ -3,12 +3,12 @@ import React from 'react';
 // *****************************************************
 // This class contains the code to render the Review pages.
 // ***************************************************** 
-class ReviewPage extends React.Component {
+class BlogPage extends React.Component {
 
   render() {
     return (
       <div className="padded-page center">
-        <h1>Reviews</h1>
+        <h1>Blog</h1>
         <h2>This page is under construction.</h2>
         <p style={{
           fontStyle: "italic"
@@ -19,4 +19,4 @@ class ReviewPage extends React.Component {
   }
 }
 
-export default ReviewPage;
+export default BlogPage;

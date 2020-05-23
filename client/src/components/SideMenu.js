@@ -84,13 +84,13 @@ class SideMenu extends React.Component {
               <span className="fa fa-wrench"></span>&nbsp;Production Tools</button>
           </div>
         );
-      case AppMode.REVIEW: /* Renders side menu if mode is review */
+      case AppMode.BLOG: /* Renders side menu if mode is blog */
         return (
           <div>
             <button className="sidemenu-item">
-              <span className="fa fa-th-list"></span>&nbsp;Reviews</button>
+              <span className="fa fa-th-list"></span>&nbsp;Blog</button>
             <button className="sidemenu-item">
-              <span className="fa fa-plus"></span>&nbsp;Leave a Review</button>
+              <span className="fa fa-plus"></span>&nbsp;About This Blog</button>
           </div>
         );
       default:
