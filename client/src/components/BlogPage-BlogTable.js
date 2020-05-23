@@ -15,8 +15,9 @@ class BlogTable extends React.Component {
     for (let p = 0; p < this.props.posts.length; ++p) {
       table.push(
         <tr key={p}>
-          <h4>{this.props.posts[p][0]}</h4>
-          <body>{this.props.posts[p][1]}</body>
+          <h3>{this.props.posts[p][0]}</h3>
+          <h5>Date: {this.props.posts[p][2]}</h5>
+          <body><text>{this.props.posts[p][1]}</text></body>
         </tr>
       );
     }
