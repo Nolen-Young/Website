@@ -11,6 +11,6 @@ const otherMusicSchema = new Schema({
 	timestamps:false
 });
 
-const OtherMusic = mongoose.model('BlogPost', otherMusicSchema);
+const OtherMusic = mongoose.model('OtherMusic', otherMusicSchema);
 
 module.exports = OtherMusic;

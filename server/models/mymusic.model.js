@@ -11,6 +11,6 @@ const myMusicSchema = new Schema({
 	timestamps:false
 });
 
-const MyMusic = mongoose.model('BlogPost', myMusicSchema);
+const MyMusic = mongoose.model('MyMusic', myMusicSchema);
 
 module.exports = MyMusic;
