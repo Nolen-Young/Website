@@ -21,6 +21,10 @@ connection.once('open', () => { // check connection
 const blogPostsRouter = require('./routes/blogposts');
 app.use('/blog', blogPostsRouter)
 
+app.get('/', (req, res) => {
+	res.send("Nolen Young's personal server. If you want to know how this thing works, ask Nolen, cause no way in hell I am documenting this right now.")
+});
+
 // run
 app.listen(port, () => { 
 	console.log('Server running on port: ' + port);

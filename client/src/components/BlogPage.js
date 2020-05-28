@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import BlogTable from "./BlogPage-BlogTable.js"
+import dotenv from 'dotenv'
 
 // ***************************************************** 
 // This class contains the
 // code to render the Blog pages.
 // *****************************************************
 class BlogPage extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -19,8 +19,7 @@ class BlogPage extends React.Component {
   }
 
   fetchPosts = async () => {
-    let url = '/blog';
-    axios.get('http://localhost:5000/blog/')
+    axios.get('http://localhost:4000/blog/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
