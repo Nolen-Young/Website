@@ -40,6 +40,9 @@ app.use("/othermusic", otherMusicRouter);
 const projectRouter = require("./routes/projects"); // projects routes
 app.use("/projects", projectRouter);
 
+const courseRouter = require("./routes/courses");
+app.use("/courses", courseRouter);
+
 app.get("/", (req, res) => {
 	res.send(
 		"Nolen Young's personal server. If you want to know how this thing works, ask Nolen, cause no way in hell I am documenting this right now."
