@@ -1,19 +1,20 @@
 const router = require("express").Router();
-let BlogPost = require("../models/blogpost.model");
+let Project = require("../models/project.model");
 
 router.route("/").get((req, res) => {
-	BlogPost.find()
-		.then((blogPosts) => res.json(blogPosts))
+	Project.find()
+		.then((project) => res.json(project))
 		.catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/").post((req, res) => {
 	const title = req.body.title;
-	const content = req.body.content;
+	const description = req.body.description;
+	const link = req.body.link;
 
-	const newBlogPost = new BlogPost({ title, content });
+	const newProject = new Project({ title, description, link });
 
-	newBlogPost
+	newProject
 		.save()
 		.then(() => res.json("Posted successfully"))
 		.catch((err) => res.status(400).json("Error: " + err));
