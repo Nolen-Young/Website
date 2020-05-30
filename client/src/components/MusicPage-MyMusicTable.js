@@ -4,7 +4,6 @@ import ReactPlayer from "react-player";
 class MyMusicTable extends React.Component {
 	renderTable = () => {
 		let table = [];
-		console.log("LENGTH: " + this.props.songs.length);
 		for (let p = 0; p < this.props.songs.length; ++p) {
 			table.push(
 				<tr key={p}>

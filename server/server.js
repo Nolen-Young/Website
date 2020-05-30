@@ -17,7 +17,6 @@ app.use(express.json()); // set up json
 
 // set up mongoose connection
 const uri = process.env.ATLAS_URI; // get uri form .env
-// connect to MongoDB
 mongoose.connect(uri, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
@@ -35,8 +34,11 @@ app.use("/blog", blogPostsRouter);
 const myMusicRouter = require("./routes/mymusic"); // my music routes
 app.use("/mymusic", myMusicRouter);
 
-const otherMusicRouter = require("./routes/othermusic");
+const otherMusicRouter = require("./routes/othermusic"); // other music routes
 app.use("/othermusic", otherMusicRouter);
+
+const projectRouter = require("./routes/projects"); // projects routes
+app.use("/projects", projectRouter);
 
 app.get("/", (req, res) => {
 	res.send(

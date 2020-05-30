@@ -16,6 +16,10 @@ class MusicPageOtherMusic extends React.Component {
 		};
 	}
 
+	componentDidMount() {
+		this.fetchOtherMusic();
+	}
+
 	fetchOtherMusic = async () => {
 		axios
 			.get("http://localhost:5000/othermusic/")
@@ -34,10 +38,6 @@ class MusicPageOtherMusic extends React.Component {
 				console.log("Error: " + err);
 			});
 	};
-
-	componentDidMount() {
-		this.fetchOtherMusic();
-	}
 
 	render() {
 		return (
