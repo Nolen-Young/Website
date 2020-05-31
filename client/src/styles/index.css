@@ -3,382 +3,379 @@
 
 /* Force an element to span entire height of window */
 .span-height {
-  height: 100%;
+	height: 100%;
 }
 
 .react-player {
-  display: block;
-  width: 100%;
+	display: block;
+	width: 100%;
 }
 
 .music-players {
-  text-align: left;
+	text-align: left;
 }
 
 .links {
-  font-size: 32px;
+	font-size: 32px;
 }
 
 .link {
-  display: inline-block;
-  padding-right: 10px;
+	display: inline-block;
+	padding-right: 10px;
 }
 
 .music-table {
-  width: 100%;
-  text-align: left;
-  vertical-align: top;
-  
+	width: 100%;
+	text-align: left;
+	vertical-align: top;
 }
 
-.music-table-row{
-  height: 100px;
-  width: 100%;
+.music-table-row {
+	height: 100px;
+	width: 100%;
 }
 
 .music-table-header {
-  background-color: lightgray;
+	background-color: lightgray;
 }
 
 .music-table-song-titles {
-  width: 150px;
-  padding-right:10px;
+	width: 100px;
+	padding-right: 10px;
 }
 
 .music-table-pseudonym {
-  width: 150px;
-  padding-right:10px;
+	width: 100px;
+	padding-right: 10px;
 }
 
 .profile-picture {
-  height: 50px;
-  width: 50px;
+	height: 50px;
+	width: 50px;
 }
 
 /* Make an item visible */
 .visible {
-  display: block;
+	display: block;
 }
 
 /* Make an item invisible */
 .invisible {
-  display: none;
+	display: none;
 }
 
 /* Styling of the fixed top bar in the app */
 .navbar {
-  overflow: hidden;
-  /* Don't allow scrolling */
-  display: block;
-  /* Occupies its own horizontal space */
-  background-color: #021c01;
-  position: fixed;
-  /* Doesn't move */
-  top: 0;
-  width: 100%;
-  /* 100% of width of screen */
-  align-content: center;
-  border-radius: 0px;
-  padding: 0px;
-  z-index: 100;
-  /* Force it to be on top */
+	overflow: hidden;
+	/* Don't allow scrolling */
+	display: block;
+	/* Occupies its own horizontal space */
+	background-color: #021c01;
+	position: fixed;
+	/* Doesn't move */
+	top: 0;
+	width: 100%;
+	/* 100% of width of screen */
+	align-content: center;
+	border-radius: 0px;
+	padding: 0px;
+	z-index: 100;
+	/* Force it to be on top */
 }
 
 .navbar-title {
-  color: #F0F0F0;
-  font-size: 18px;
+	color: #f0f0f0;
+	font-size: 18px;
 }
 
 /* navbarItems defines styling of items within navbar. They should be centered top-to-bottom
    with a small internal margin */
 .navbar-items {
-  display: inline-flex;
-  align-items: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+	display: inline-flex;
+	align-items: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 /* sidemenu -- Styling of the side navigation menu */
 .sidemenu {
-  height: 100%;
-  /* Menu is full height of window */
-  position: fixed;
-  /* Menu stays in place regardless of other content */
-  z-index: 150;
-  /* Force the menu to be at front */
-  top: 48px;
-  /* Position menu 48 px from top of screen; accomodates top navbar */
-  left: 0;
-  /* Position the menu on the left hand side */
-  background-color: #021c01;
-  /* Background color is dark blue */
-  overflow-x: hidden;
-  /* Don't allow horizontal scroll */
-  transition: 0.5s;
-  /* Animation transition time is 0.5 sec */
-  padding-top: 2px;
-  /* Place menu content 2 px from top */
+	height: 100%;
+	/* Menu is full height of window */
+	position: fixed;
+	/* Menu stays in place regardless of other content */
+	z-index: 150;
+	/* Force the menu to be at front */
+	top: 48px;
+	/* Position menu 48 px from top of screen; accomodates top navbar */
+	left: 0;
+	/* Position the menu on the left hand side */
+	background-color: #021c01;
+	/* Background color is dark blue */
+	overflow-x: hidden;
+	/* Don't allow horizontal scroll */
+	transition: 0.5s;
+	/* Animation transition time is 0.5 sec */
+	padding-top: 2px;
+	/* Place menu content 2 px from top */
 }
 
 /* applies only to an anchor tag that's a child of a sidenav element. */
 .sidemenu button {
-  padding: 16px 8px 16px 32px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #F0F0F0;;
-  background-color: #021c01;
-  display: block;
-  width: 100%;
-  transition: 0.3s;
-  border: none;
+	padding: 16px 8px 16px 32px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #f0f0f0;
+	background-color: #021c01;
+	display: block;
+	width: 100%;
+	transition: 0.3s;
+	border: none;
 }
-
 
 /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
 .sidemenu button:hover {
-  cursor: pointer;
-  text-decoration: none;
-  color: black !important;
-  background-color: #F0F0F0; 
+	cursor: pointer;
+	text-decoration: none;
+	color: black !important;
+	background-color: #f0f0f0;
 }
 
 .sidemenu button:active {
-  background-color: #F0F0F0 !important;
-  color: black !important;
+	background-color: #f0f0f0 !important;
+	color: black !important;
 }
 
 .sidemenu {
-  color: #F0F0F0;
+	color: #f0f0f0;
 }
 
 /* set width to 250px when menu is open */
 .sidemenu-open {
-  width: 250px;
+	width: 250px;
 }
 
 /* set width to 0px when menu is closed */
 .sidemenu-closed {
-  width: 0px;
+	width: 0px;
 }
-
 
 /* Cascading style within a style: This definition applies only to sidemenu-title class defined in an 
    element that's a child of sidemenu element. */
 .sidemenu .sidemenu-title {
-  margin-bottom: 2px;
-  border-bottom: 2px solid #F0F0F0;
+	margin-bottom: 2px;
+	border-bottom: 2px solid #f0f0f0;
 }
 
 .sidemenu .sidemenu-userID {
-  font-size: 14px;
-  color: #F0F0F0;
+	font-size: 14px;
+	color: #f0f0f0;
 }
 
 /* side menu item styling */
 .sidemenu-btn {
-  background-color: transparent;
-  border-color: #021c01;
-  text-align: center;
-  color: #F0F0F0;
+	background-color: transparent;
+	border-color: #021c01;
+	text-align: center;
+	color: #f0f0f0;
 }
 
 .sidemenu-btn-icon {
-  color: #F0F0F0;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
+	color: #f0f0f0;
+	font-size: 30px;
+	cursor: pointer;
+	text-align: center;
 }
 
 /* side menu styling when menu item selected */
 .sidemenu-item-selected {
-  cursor: default;
-  color: black !important;
-  background-color: #F0F0F0 !important;
+	cursor: default;
+	color: black !important;
+	background-color: #f0f0f0 !important;
 }
 
 /* The SpeedScore dark blue color theme  */
 .btn-color-theme {
-  background-color: #021c01;
-  color: #F0F0F0;
+	background-color: #021c01;
+	color: #f0f0f0;
 }
 
 /* The color theme when a bottom bar menu item is selected */
 .btn-alt-color-theme {
-  background-color: #F0F0F0;
-  color: #021c01;
+	background-color: #f0f0f0;
+	color: #021c01;
 }
 
 /* change items to gray when disabled class is applied  */
 .disabled {
-  color: gray;
+	color: gray;
 }
 
 .btn-color-theme-outline {
-  border: 2px;
-  border-color: #021c01;
-  color: #021c01;
+	border: 2px;
+	border-color: #021c01;
+	color: #021c01;
 }
 
 /* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
 .padded-page {
-  margin: auto;
-  padding: 56px 50px 56px 50px;
-  max-width: 1080px;
-  height: 100%;
-  /* 100% of app */
+	margin: auto;
+	padding: 56px 50px 56px 50px;
+	max-width: 1080px;
+	height: 100%;
+	/* 100% of app */
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .center {
-  text-align: center;
+	text-align: center;
 }
 
 .right {
-  text-align: right;
+	text-align: right;
 }
 
 .bottom {
-  position: relative;
-  
-  bottom: 0px;
+	position: relative;
+
+	bottom: 0px;
 }
 
 /* Styling for mode bar at the bottom of the page */
 .modebar {
-  background-color: #021c01;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 100;
+	background-color: #021c01;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
 }
 
 /* Style the links inside the bottom nav bar */
 .modebar button {
-  display: block;
-  float: left;
-  width: 33%;
-  background-color: #021c01;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  border: none;
+	display: block;
+	float: left;
+	width: 33%;
+	background-color: #021c01;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	border: none;
 }
 
 /* Add a gray background color to button when it is hovered */
 .modebar button:hover {
-  color: black !important;
-  background-color: #F0F0F0;
+	color: black !important;
+	background-color: #f0f0f0;
 }
 
 /* Add a gray background color to the button when it is selected */
 .modebar button:active {
-  background-color: #F0F0F0 ;
-  color: black !important;
+	background-color: #f0f0f0;
+	color: black !important;
 }
 
 /* mode bar button styling when item is selected */
 .modebar-item-selected {
-  pointer-events: none;
-  cursor: default;
-  color: black !important;
-  background-color: #F0F0F0 !important;
+	pointer-events: none;
+	cursor: default;
+	color: black !important;
+	background-color: #f0f0f0 !important;
 }
 
 /* Hide the link that should open and close the navbar on small screens */
 .modebar .icon {
-  display: none;
+	display: none;
 }
 
 /* Style the icons in the bottom bar */
 .modebar-icon {
-  display: block;
-  padding-top: 3px;
-  color: #F0F0F0;
+	display: block;
+	padding-top: 3px;
+	color: #f0f0f0;
 }
 
 .modebar-icon-selected {
-  display: block;
-  padding-top: 3px;
-  color: black;
+	display: block;
+	padding-top: 3px;
+	color: black;
 }
 
 /* Style the text in the bottom bar */
 .modebar-text {
-  display: block;
-  font-size: small;
-  color: #F0F0F0;
+	display: block;
+	font-size: small;
+	color: #f0f0f0;
 }
 
 .modebar-text-selected {
-  display: block;
-  font-size: small;
-  color: black;
+	display: block;
+	font-size: small;
+	color: black;
 }
 
 /* Style the floating action button, which is fixed in the lower right of the app */
 .floatbtn {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 60px;
-  right: 40px;
-  background-color: #021c01;
-  color: #F0F0F0;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 3px #999;
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 60px;
+	right: 40px;
+	background-color: #021c01;
+	color: #f0f0f0;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
 }
 
 .floatbtn-icon {
-  margin-top: 22px;
-  color: #F0F0F0;
+	margin-top: 22px;
+	color: #f0f0f0;
 }
 
 .floatbtn a:visited {
-  color: #F0F0F0;
+	color: #f0f0f0;
 }
 
 .floatbtn a:active {
-  color: #F0F0F0;
+	color: #f0f0f0;
 }
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 /* This class disables a button */
 .disabled-button {
-  pointer-events: none;
-  opacity: 0.4;
+	pointer-events: none;
+	opacity: 0.4;
 }
 
 .floatbtn a:visited {
-  color: #F0F0F0 !important;
+	color: #f0f0f0 !important;
 }
 
 .floatbtn a:active {
-  color: #F0F0F0 !important;
+	color: #f0f0f0 !important;
 }
 
 /* Login page styling */
 .login-text {
-  text-align: center;
-  width: 90%;
-  height: 10%;
-  font-size: 24px;
+	text-align: center;
+	width: 90%;
+	height: 10%;
+	font-size: 24px;
 }
 
 .login-btn {
-  width: 70%;
-  font-size: 36px;
+	width: 70%;
+	font-size: 36px;
 }
 
 /* Form styling */
 
 .form-center {
-  text-align: center;
+	text-align: center;
 }

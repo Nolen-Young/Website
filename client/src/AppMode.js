@@ -8,8 +8,7 @@ but it will do for our purposes*/
 const AppMode = {
   PROFESSIONAL: "ProfessionalMode",
   MUSIC: "MusicMode",
-  REVIEW: "ReviewMode",
-  REVIEW_NEWREVIEW: "ReviewMode-NewReview"
+  BLOG: "BlogMode"
 };
 
 Object.freeze(AppMode); //This ensures that the object is immutable.
