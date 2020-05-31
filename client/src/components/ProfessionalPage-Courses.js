@@ -22,7 +22,7 @@ class ProfessionalPageCourses extends React.Component {
 
 	fetchCourses = async () => {
 		axios
-			.get("http://localhost:5000/courses/")
+			.get("/courses/")
 			.then((res) => {
 				if (res.data.length > 0) {
 					this.setState({

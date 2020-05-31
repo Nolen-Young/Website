@@ -21,7 +21,7 @@ class ProfessionalPageProjects extends React.Component {
 
 	fetchProjects = async () => {
 		axios
-			.get("http://localhost:5000/projects/")
+			.get("/projects/")
 			.then((res) => {
 				if (res.data.length > 0) {
 					this.setState({

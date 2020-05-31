@@ -22,7 +22,7 @@ class MusicPageOtherMusic extends React.Component {
 
 	fetchOtherMusic = async () => {
 		axios
-			.get("http://localhost:5000/othermusic/")
+			.get("/othermusic/")
 			.then((response) => {
 				if (response.data.length > 0) {
 					this.setState({

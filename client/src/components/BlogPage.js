@@ -22,7 +22,7 @@ class BlogPage extends React.Component {
 
 	fetchPosts = async () => {
 		axios
-			.get("http://localhost:5000/blog/")
+			.get("/blog/")
 			.then((response) => {
 				if (response.data.length > 0) {
 					this.setState({
