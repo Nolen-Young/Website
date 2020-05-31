@@ -43,7 +43,7 @@ class MusicPageOtherMusic extends React.Component {
 		return (
 			<div id='otherMusicPage'>
 				<div id='header' className='center'>
-					<h1>Other People's Music I Like</h1>
+					<h1>Music I Am Listening To A Lot</h1>
 				</div>
 				<OtherMusicTable songs={this.state.songs} />
 			</div>

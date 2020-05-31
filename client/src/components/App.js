@@ -174,7 +174,6 @@ class App extends React.Component {
 	// renders the app
 	render() {
 		const ModePage = modeToPage[this.state.mode]; // get the current page to be rendered
-		console.log("APP.JS - MUSIC MODE: " + this.state.musicMode);
 		// render navbar, side menu, mode bar, and the proper page
 		// renders about if show about is true
 		return (
