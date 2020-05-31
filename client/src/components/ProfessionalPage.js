@@ -22,40 +22,27 @@ professionalPageModeToPage[
 // It renders the about page, courses page, and projects page.
 // *****************************************************
 class ProfessionalPage extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			mode: props.mode,
-			menuOpen: props.menuOpen,
-			professionalMode: props.professionalMode,
-		};
-	}
-
 	render() {
-		this.state.professionalMode = this.props.professionalMode; // get the current mode passed up from App.js
 		const ProfessionalPageRender =
-			professionalPageModeToPage[this.state.professionalMode]; // get the correct mode
+			professionalPageModeToPage[this.props.professionalMode]; // get the correct mode
 
 		// renders the ProfessionPageRender item which
 		// will be the correct page for depending on the professionalMode
 		return (
 			<div className='padded-page'>
 				<ProfessionalPageRender
-					menuOpen={this.state.menuOpen}
-					professionalMode={this.state.professionalMode}
-					changeProfessionalMode={this.state.handleChangeProfessionalMode}
-					mode={this.state.mode}
+					menuOpen={this.props.menuOpen}
+					professionalMode={this.props.professionalMode}
+					changeProfessionalMode={this.props.handleChangeProfessionalMode}
+					mode={this.props.mode}
 					changeMode={this.handleChangeMode}
 				/>
 
-				<div id='footer' className='bottom center'>
-					<p
-						style={{
-							fontStyle: "italic",
-						}}>
+				<footer className='bottom center'>
+					<p style={{ fontStyle: "italic" }}>
 						&copy; 2020 Nolen Young. No rights reserved.
 					</p>
-				</div>
+				</footer>
 			</div>
 		);
 	}

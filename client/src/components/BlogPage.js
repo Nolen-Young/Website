@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import BlogTable from "./BlogPage-BlogTable.js";
 
 // *****************************************************
 // This class contains the
@@ -15,6 +14,10 @@ class BlogPage extends React.Component {
 		this.state = {
 			posts: [],
 		};
+	}
+
+	componentDidMount() {
+		this.fetchPosts();
 	}
 
 	fetchPosts = async () => {
@@ -36,24 +39,33 @@ class BlogPage extends React.Component {
 			});
 	};
 
-	componentDidMount() {
-		this.fetchPosts();
-	}
+	renderPost = (post) => {
+		return (
+			<div key={post[0]}>
+				<h3>{post[0]}</h3>
+				<h5>Date: {post[2]}</h5>
+				<p>{post[1]}</p>
+			</div>
+		);
+	};
 
 	render() {
 		return (
 			<div className='padded-page center'>
 				<h1>Blog</h1>
-				<BlogTable
-					posts={this.state.posts}
-					post_userID={this.state.post_userID}
-				/>
-				<p
-					style={{
-						fontStyle: "italic",
-					}}>
-					&copy; 2020 Nolen Young. No rights reserved.
-				</p>
+				<div style={{ textAlign: "left" }}>
+					{Object.keys(this.state.posts).length === 0 ? (
+						<p>No Content</p>
+					) : (
+						this.state.posts.map((post) => this.renderPost(post))
+					)}
+				</div>
+
+				<footer className='bottom center'>
+					<p style={{ fontStyle: "italic" }}>
+						&copy; 2020 Nolen Young. No rights reserved.
+					</p>
+				</footer>
 			</div>
 		);
 	}

@@ -100,17 +100,6 @@ class SideMenu extends React.Component {
 							onClick={() => this.handleMenuBtnClick(MusicPageMode.OTHERMUSIC)}>
 							<span className='fa fa-search'></span>&nbsp;Other People's Music
 						</button>
-
-						{/* Renders side menu if musicMode is TOOLS */}
-						<button
-							className={
-								this.props.musicMode === MusicPageMode.TOOLS
-									? " sidemenu-item-selected "
-									: " sidemenu-item "
-							}
-							onClick={() => this.handleMenuBtnClick(MusicPageMode.TOOLS)}>
-							<span className='fa fa-wrench'></span>&nbsp;Production Tools
-						</button>
 					</div>
 				);
 			case AppMode.BLOG /* Renders side menu if mode is blog */:

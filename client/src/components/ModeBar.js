@@ -19,8 +19,7 @@ class ModeBar extends React.Component {
 				className={
 					"modebar" +
 					(this.props.mode === AppMode.LOGIN ? " invisible" : " visible")
-				}
-			>
+				}>
 				<button
 					className={
 						"modebar-btn" +
@@ -32,24 +31,21 @@ class ModeBar extends React.Component {
 						this.props.menuOpen
 							? null
 							: () => this.handleModeBtnClick(AppMode.PROFESSIONAL)
-					}
-				>
+					}>
 					<span
 						className={
 							"nonMenuItem fa fa-user " +
 							(this.props.mode === AppMode.PROFESSIONAL
 								? "modebar-icon-selected"
 								: "modebar-icon")
-						}
-					></span>
+						}></span>
 					<span
 						className={
 							"modebar-text " +
 							(this.props.mode === AppMode.PROFESSIONAL
 								? "modebar-text-selected"
 								: "modebar-text")
-						}
-					>
+						}>
 						My Portfolio
 					</span>
 				</button>
@@ -63,24 +59,21 @@ class ModeBar extends React.Component {
 						this.props.menuOpen
 							? null
 							: () => this.handleModeBtnClick(AppMode.MUSIC)
-					}
-				>
+					}>
 					<span
 						className={
 							" nonMenuItem fa fa-music " +
 							(this.props.mode === AppMode.MUSIC
 								? "modebar-icon-selected"
 								: "modebar-icon")
-						}
-					></span>
+						}></span>
 					<span
 						className={
 							"modebar-text " +
 							(this.props.mode === AppMode.MUSIC
 								? "modebar-text-selected"
 								: "modebar-text")
-						}
-					>
+						}>
 						My Music
 					</span>
 				</button>
@@ -94,24 +87,21 @@ class ModeBar extends React.Component {
 						this.props.menuOpen
 							? null
 							: () => this.handleModeBtnClick(AppMode.BLOG)
-					}
-				>
+					}>
 					<span
 						className={
 							" nonMenuItem fa fa-th-list " +
 							(this.props.mode === AppMode.BLOG
 								? "modebar-icon-selected"
 								: "modebar-icon")
-						}
-					></span>
+						}></span>
 					<span
 						className={
 							"modebar-text " +
 							(this.props.mode === AppMode.BLOG
 								? "modebar-text-selected"
 								: "modebar-text")
-						}
-					>
+						}>
 						Blog
 					</span>
 				</button>

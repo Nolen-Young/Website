@@ -43,7 +43,9 @@ class ProfessionalPageProjects extends React.Component {
 			<div key={project[0]}>
 				<h5>{project[0]}</h5>
 				<div className='links'>
-					<a href={project[2]} className='fa fa-github link'></a>
+					<a href={project[2]} className='fa fa-github link'>
+						{" "}
+					</a>
 				</div>
 				<p>{project[1]}</p>
 			</div>
