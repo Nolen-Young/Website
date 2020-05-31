@@ -12,6 +12,7 @@ require("dotenv").config();
 
 // Set up of packages
 const app = express(); // set up express
+const port = process.env.PORT || 5000; // grab our port
 app.use(cors()); // set up cors
 app.use(express.json()); // set up json
 
@@ -56,7 +57,7 @@ app.get("*", (req, res) => {
 // });
 
 // run
-const port = process.env.PORT || 5000; // grab our port
+
 app.listen(port, () => {
 	console.log("Server running on port: " + port);
 });
