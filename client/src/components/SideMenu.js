@@ -108,9 +108,6 @@ class SideMenu extends React.Component {
 						<button className='sidemenu-item'>
 							<span className='fa fa-th-list'></span>&nbsp;Blog
 						</button>
-						<button className='sidemenu-item'>
-							<span className='fa fa-plus'></span>&nbsp;About This Blog
-						</button>
 					</div>
 				);
 			default:
