@@ -7,11 +7,11 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 require("dotenv").config();
 
 // Set up of packages
 const app = express(); // set up express
-const port = process.env.PORT || 5000; // grab our port
 app.use(cors()); // set up cors
 app.use(express.json()); // set up json
 
@@ -43,13 +43,20 @@ app.use("/projects", projectRouter);
 const courseRouter = require("./routes/courses");
 app.use("/courses", courseRouter);
 
-app.get("/", (req, res) => {
-	res.send(
-		"Nolen Young's personal server. If you want to know how this thing works, ask Nolen, cause no way in hell I am documenting this right now."
-	);
+// serve static assets
+app.use(express.static(path.join(__dirname, "client", "build")));
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
+// app.get("/", (req, res) => {
+// 	res.send(
+// 		"Nolen Young's personal server. If you want to know how this thing works, ask Nolen, cause no way in hell I am documenting this right now."
+// 	);
+// });
+
 // run
+const port = process.env.PORT || 5000; // grab our port
 app.listen(port, () => {
 	console.log("Server running on port: " + port);
 });
