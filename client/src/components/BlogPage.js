@@ -57,9 +57,7 @@ class BlogPage extends React.Component {
 					{Object.keys(this.state.posts).length === 0 ? (
 						<p>No Content</p>
 					) : (
-						this.state.posts
-							.reverse()
-							.findIndexmap((post) => this.renderPost(post))
+						this.state.posts.reverse().map((post) => this.renderPost(post))
 					)}
 				</div>
 
